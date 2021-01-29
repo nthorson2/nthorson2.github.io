@@ -8,10 +8,10 @@
 		<h2 style="padding-top: 20px;">Contact Information</h2>
 		<p>If you need to contact me, please reach out through email at <a href="mailto:nthorson2@unl.edu">nthorson2@unl.edu</a></p>
 		<p style="padding-top: 50px;"><b>Main Repository:</b></p>
-		<a href="https://github.com/nthorson2/nthorson2.github.io.git;">https://github.com/nthorson2/nthorson2.github.io.git</a>
+		<a href="https://github.com/nthorson2/nthorson2.github.io.git">https://github.com/nthorson2/nthorson2.github.io.git</a>
 		<p style="padding-top: 50px;"><b>Assignments:</b></p>
 		<ul>
-			<li><a href=";">Lab 1</a></li>
+			<li><a href="">Lab 1</a></li>
 		</ul>
 	</body>
 </html>
