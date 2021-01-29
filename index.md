@@ -9,7 +9,7 @@
 		<p>If you need to contact me, please reach out through email at <a href="mailto:nthorson2@unl.edu">nthorson2@unl.edu</a></p>
 		<p><b>Main Repository:</b></p>
 		<a href="https://github.com/nthorson2/nthorson2.github.io.git">https://github.com/nthorson2/nthorson2.github.io.git</a>
-		<p style="padding-top: 15px;"><b>Assignments:</b></p>
+		<p style="padding-top: 35px;"><b>Assignments:</b></p>
 		<ul>
 			<li><a href="">Lab 1</li>
 		</ul>
