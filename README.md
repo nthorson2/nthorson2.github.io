@@ -1,6 +1,8 @@
-## Welcome to my Github Page
+## Welcome to GitHub Pages
 
-This will be dedicated to solely to the Geography 817 course - Web GIS
+You can use the [editor on GitHub](https://github.com/nthorson2/nthorson2.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
