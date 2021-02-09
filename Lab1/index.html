@@ -18,9 +18,10 @@
     
 	<!--(4) finally in the head, scripts themselves tell the web browser how to handle user-initiated events and draw map features-->
 	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-
-
 	
+    <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js"
+	    integrity="sha512-ucw7Grpc+iEQZa711gcjpMBnmd9qju1CICsRaryvX7HJk1K0pG1/prxKvtJwpgm5ZHdvAil7YPxI1oWP0WK3UQ=="
+	    crossorgin=""></script>
 </head>
 <body>
 
@@ -54,6 +55,8 @@
 		maxZoom: 30,
 		attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://waymarkedtrails.org">waymarkedtrails.org</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 	}).addTo(mymap);
+	L.esri.basemapLayer('TerrainLabels').addTo(mymap);
+	
 //(10) right above here, you see you're adding this tileset and setting the max zoom level of "mymap" 
 
 //(11) this is how you define individual features on the map - a marker, a cirlce, a polygon. You could also call up a variable and point it to a hosted GIS file to load it in.
