@@ -11,7 +11,7 @@
 		<a href="https://github.com/nthorson2/nthorson2.github.io.git">https://github.com/nthorson2/nthorson2.github.io.git</a>
 		<p style="padding-top: 50px;"><b>Assignments:</b></p>
 		<ul>
-			<li><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab1">Lab 1</a></li>
+			<ul><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab1">Lab 1</a></ul>
 				<li><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab1/index.htnl">Assignemnt 1</a></li>
 		</ul>
 	</body>
