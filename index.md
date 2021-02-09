@@ -13,7 +13,7 @@
 		<ul>
 			<li><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab1">Lab 1</a></li>
 				<ul>
-					<li><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab1/index.htnl">Assignment 1</a></li>
+					<li><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab1/index.html">Assignment 1</a></li>
 				</ul>
 		</ul>
 	</body>
