@@ -95,7 +95,7 @@
 	};
 
 //(16) you can also comment out mapped items if you do not want them to draw. note that the var reference above is still present but below i have turned off a layer
-	L.geoJSON(LoveLibrary,{}).addTo(mymap).bindPopup(String(LoveLibrary.properties.name).concat("\n")+String(LoveLibrary.properties.popupContent).concat("\n"));
+	L.geoJSON(LoveLibrary,{}).addTo(mymap).bindPopup(String(LoveLibrary.properties.name)+"\n"+"\n"+String(LoveLibrary.properties.popupContent));
 	
 //(17) think about how you would write some pop up text into your Love Library layer. Look at how it is done above. Read online help. Ask your neighbor. There are multiple approaches!
 
