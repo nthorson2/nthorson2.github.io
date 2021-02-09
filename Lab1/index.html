@@ -96,7 +96,8 @@
 
 //(16) you can also comment out mapped items if you do not want them to draw. note that the var reference above is still present but below i have turned off a layer
 	L.geoJSON(LoveLibrary,{}).addTo(mymap).bindPopup(
-		'<b>'+String(LoveLibrary.properties.name+'\n')+'</b>'+
+		'<b>'+String(LoveLibrary.properties.name)+'</b>'+
+		'<br />'+
 	 	'<i>'+String(LoveLibrary.properties.popupContent)+'</i>'
 	);
 	
