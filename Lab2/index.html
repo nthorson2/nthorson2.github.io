@@ -61,10 +61,36 @@
               maxZoom: 20,
               ext: 'png'
           }).addTo(map);
-            
-          var provinces = L.geoJson(provinces).addTo(map);
           
-          var covidData = L.geoJson(coviddata_.addTo(map);
+          function getColor(value) {
+              return value > 50000000 ? '#54278f':
+                  value > 25000000  ? '#756bb1':
+                  value > 10000000  ? '#9e9ac8':
+                  value > 5000000  ? '#cbc9e2':
+                                     '#f2f0f7';
+          }
+
+          function style(feature){
+              return {
+                  fillColor: getColor(feature.properties.POP10),
+                  weight: 2,
+                  opacity: 1,
+                  color: 'gray',
+                  fillOpacity: 0.9
+              };
+          }
+          
+          function calcRadius(val) {
+              var minValue = 100;
+              var minRadius = 5;
+              
+              return 0.9 * Math.pow(val/minValue, .7) * minRadius;
+          }     
+            
+            
+          var provinces = L.geoJson(provinces, {style:style}).addTo(map);
+          
+          var covidData = L.geoJson(coviddata,{style:calcRadius}).addTo(map);
                                     
           var basemaps = {
               "Light Canvas": base,
