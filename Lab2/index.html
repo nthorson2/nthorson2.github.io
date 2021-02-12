@@ -88,9 +88,21 @@
           }     
             
             
-          var provinces = L.geoJson(provinces, {style:style}).addTo(map);
+          var provinces = new L.geoJson(provinces, {style:style}).addTo(map);
           
-          var covidData = L.geoJson(covidData,{style:calcRadius}).addTo(map);
+          var covidData = new L.geoJson(covidData,{
+              pointToLayer: function(feature, ll){
+                  return L.circleMarker(ll, {
+                      color: '#000000',
+                      opacity: 1,
+                      weight: 2,
+                      fillColor: '#808080',
+                      fillOpacity: .5,
+                  //radius: 10
+                      radius: calcRadius(feature.properties.covid)
+                  });
+              }
+          }).addTo(map);
                                     
           var basemaps = {
               "Light Canvas": base,
