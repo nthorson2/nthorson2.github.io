@@ -88,7 +88,7 @@
           }
             
           function covidPoint(feature){
-              return L.circleMarker(11, {
+              return L.circleMarker(ll, {
                   color: '#000000',
                   opacity: 1,
                   weight: 2,
@@ -102,19 +102,7 @@
             
           var provinces = new L.geoJson(provinces, {style:provincesStyle}).addTo(map);
           
-          var covidData = new L.geoJson(covidData, {
-              pointToLayer: function(feature, ll){
-                  return L.circleMarker(ll, {
-                      color: '#000000',
-                      opacity: 1,
-                      weight: 2,
-                      fillColor: '#808080',
-                      fillOpacity: .5,
-                  //radius: 10
-                      radius: calcRadius(feature.properties.covid)
-                  });
-              }   
-          }).addTo(map);
+          var covidData = new L.geoJson(covidData, {pointToLayer: covidPoint}).addTo(map);
                                     
           var basemaps = {
               "Light Canvas": base,
