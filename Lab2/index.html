@@ -87,7 +87,8 @@
               return 0.9 * Math.pow(val/minValue, .7) * minRadius;
           }     
           
-          function covidPoint(feature, radius){
+          function covidPoint(feature){
+              radius = 11;
               return L.circleMarker(radius, {
                   color: '#000000',
                   opacity: 1,
@@ -103,7 +104,7 @@
           var provinces = new L.geoJson(provinces, {style:provincesStyle}).addTo(map);
           
           var covidData = new L.geoJson(covidData,{
-              pointToLayer: covidPoint(feature,11) 
+              pointToLayer: covidPoint 
           }).addTo(map);
                                     
           var basemaps = {
