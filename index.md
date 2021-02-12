@@ -10,12 +10,12 @@
 		<p style="padding-top: 50px;"><b>Main Repository:</b></p>
 		<a href="https://github.com/nthorson2/nthorson2.github.io.git">https://github.com/nthorson2/nthorson2.github.io.git</a>
 		<p style="padding-top: 50px;"><b>Assignments:</b></p>
-		<ul style="padding-top: 50px;">
-			<li><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab1">Lab 1</a></li>
+		<ul>
+			<li><a style="padding-top: 50px;" href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab1">Lab 1</a></li>
 				<ul>
 					<li><a href="https://nthorson2.github.io/Lab1/index.html">Assignment 1</a></li>
 				</ul>
-			<li><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab2">Lab 2</a></li>
+			<li><a style="padding-top: 50px;" href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab2">Lab 2</a></li>
 				<ul>
 					<li><a href="https://nthorson2.github.io/Lab2/index.html">Assignment 2</a></li>
 				</ul>
