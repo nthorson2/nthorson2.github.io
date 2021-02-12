@@ -15,7 +15,7 @@
 				<ul>
 					<li><a href="https://nthorson2.github.io/Lab1/index.html">Assignment 1</a></li>
 				</ul>
-			<li style="padding-top: 50px;"><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab2">Lab 2</a></li>
+			<li style="padding-top: 10px;"><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab2">Lab 2</a></li>
 				<ul>
 					<li><a href="https://nthorson2.github.io/Lab2/index.html">Assignment 2</a></li>
 				</ul>
