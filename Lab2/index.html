@@ -70,7 +70,7 @@
                                      '#f2f0f7';
           }
 
-          function style(feature){
+          function provincesStyle(feature){
               return {
                   fillColor: getColor(feature.properties.POP10),
                   weight: 2,
@@ -86,22 +86,24 @@
               
               return 0.9 * Math.pow(val/minValue, .7) * minRadius;
           }     
+          
+          function covidPoint(feature, radius){
+              return L.circleMarker(radius, {
+                  color: '#000000',
+                  opacity: 1,
+                  weight: 2,
+                  fillColor: '#808080',
+                  fillOpacity: .5,
+              //radius: 10
+                  radius: calcRadius(feature.properties.covid)
+              });
+          }
             
             
-          var provinces = new L.geoJson(provinces, {style:style}).addTo(map);
+          var provinces = new L.geoJson(provinces, {style:provincesStyle}).addTo(map);
           
           var covidData = new L.geoJson(covidData,{
-              pointToLayer: function(feature, ll){
-                  return L.circleMarker(ll, {
-                      color: '#000000',
-                      opacity: 1,
-                      weight: 2,
-                      fillColor: '#808080',
-                      fillOpacity: .5,
-                  //radius: 10
-                      radius: calcRadius(feature.properties.covid)
-                  });
-              }
+              pointToLayer: covidPoint(feature,11) 
           }).addTo(map);
                                     
           var basemaps = {
