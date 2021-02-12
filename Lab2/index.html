@@ -103,8 +103,8 @@
           var provinces = new L.geoJson(provinces, {style:provincesStyle}).addTo(map);
           
           var covidData = new L.geoJson(covidData, {
-              pointToLayer: function(feature,11){
-                  return L.circleMarker(11, {
+              pointToLayer: function(feature, ll){
+                  return L.circleMarker(ll, {
                       color: '#000000',
                       opacity: 1,
                       weight: 2,
