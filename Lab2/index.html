@@ -87,7 +87,7 @@
               return 0.9 * Math.pow(val/minValue, .7) * minRadius;
           }
             
-          function covidPoint(feature){
+          function covidPoint(feature, ll){
               return L.circleMarker(ll, {
                   color: '#000000',
                   opacity: 1,
