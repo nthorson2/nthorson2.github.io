@@ -23,106 +23,136 @@
         </style>
 
     </head>
-
- 
-
+    
     <body>
-
         <div id="map"></div>
-
- 
-
+        
         <script type="text/javascript">
-          var map = L.map('map', {
-              center: [34.666, 104.9569],
-              zoom: 5
-          });
+            var map = L.map('map', {
+                center: [34.666, 104.9569],
+                zoom: 5
+            });
 
-         L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
-              attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-              subdomains: 'abcd',
-              minZoom: 0,
-              maxZoom: 20,
-              ext: 'png',
-              zIndex: 100
-         }).addTo(map);
+            L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abcd',
+                minZoom: 0,
+                maxZoom: 20,
+                ext: 'png',
+                zIndex: 100
+            }).addTo(map);
             
-          var imagery = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', {
-              attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-              subdomains: 'abcd',
-              minZoom: 0,
-              maxZoom: 18,
-              ext: 'png',
-              zIndex: 100
-          });
+            var imagery = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', {
+                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abcd',
+                minZoom: 0,
+                maxZoom: 18,
+                ext: 'png',
+                zIndex: 100
+            });
 
-          var base = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
-              attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-              subdomains: 'abcd',
-              minZoom: 0,
-              maxZoom: 20,
-              ext: 'png',
-              zIndex: 100
-          }).addTo(map);
+            var base = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
+                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abcd',
+                minZoom: 0,
+                maxZoom: 20,
+                ext: 'png',
+                zIndex: 100
+            }).addTo(map);
           
-          function getColor(value) {
-              return value > 50000000 ? '#54278f':
-                  value > 25000000  ? '#756bb1':
-                  value > 10000000  ? '#9e9ac8':
-                  value > 5000000  ? '#cbc9e2':
-                                     '#f2f0f7';
-          }
+            function getColor(value) {
+                return value > 50000000 ? '#54278f':
+                    value > 25000000  ? '#756bb1':
+                    value > 10000000  ? '#9e9ac8':
+                    value > 5000000  ? '#cbc9e2':
+                                        '#f2f0f7';
+            }
 
-          function provincesStyle(feature){
-              return {
-                  fillColor: getColor(feature.properties.POP10),
-                  weight: 2,
-                  opacity: 1,
-                  color: 'gray',
-                  fillOpacity: 0.9,
-                  zIndex: 150
-              };
-          }
+            function provincesStyle(feature){
+                return {
+                    fillColor: getColor(feature.properties.POP10),
+                    weight: 2,
+                    opacity: 1,
+                    color: 'gray',
+                    fillOpacity: 0.9,
+                    zIndex: 150
+                };
+            }
           
-          function calcRadius(val) {
-              var minValue = 100;
-              var minRadius = 5;
+            function calcRadius(val) {
+                var minValue = 100;
+                var minRadius = 5;
               
-              return 0.9 * Math.pow(val/minValue, .7) * minRadius;
-          }
+                return 0.9 * Math.pow(val/minValue, .7) * minRadius;
+            }
             
-          function covidPoint(feature, ll){
-              return L.circleMarker(ll, {
-                  color: '#000000',
-                  opacity: 1,
-                  weight: 2,
-                  fillColor: '#808080',
-                  fillOpacity: .5,
-                  zIndex: 200,
-              //radius: 10
-                  radius: calcRadius(feature.properties.covid)
-              });
-          }
+            function covidPoint(feature, ll){
+                return L.circleMarker(ll, {
+                    color: '#000000',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#808080',
+                    fillOpacity: .5,
+                    zIndex: 200,
+                //radius: 10
+                    radius: calcRadius(feature.properties.covid)
+                });
+            }
             
-            
-          var provinces = new L.geoJson(provinces, {style:provincesStyle}).addTo(map);
+            var provinces = new L.geoJson(provinces, {style:provincesStyle}).addTo(map);
           
-          var covidData = new L.geoJson(covidData, {pointToLayer: covidPoint}).addTo(map);
+            var covidData = new L.geoJson(covidData, {pointToLayer: covidPoint}).addTo(map);
                                     
-          var basemaps = {
-              "Light Canvas": base,
-              "Satellite Imagery": imagery
-          };
+            var basemaps = {
+                "Light Canvas": base,
+                "Satellite Imagery": imagery
+            };
 
-          var overlaymaps = {
-               "China Provinces ": provinces,
-               "Covid Data ": covidData
-          };
+            var overlaymaps = {
+                "China Provinces ": provinces,
+                "Covid Data ": covidData
+            };
 
-          L.control.layers(basemaps, overlaymaps, {collapsed:false}).addTo(map);
+            L.control.layers(basemaps, overlaymaps, {collapsed:false}).addTo(map);
 
+            
+            var legend = L.control({position: 'bottomright'}); // Try the other lower corner if you prefer.
+
+            legend.onAdd = function (map) {
+            var div = L.DomUtil.create('div', 'legend'),
+                grades = [0, 1000000, 2000000, 5000000, 10000000]; // break values to define the intervals of population - YOU WILL NEED TO MODIFY IT TO GET THE RIGHT LEGEND BREAKS
+                div.innerHTML = '<b>Population 2019 <br><br></b>';
+
+            // The legend title, in this case it's Population 2019 
+
+            // Loop through the classes or “grades” and generate a label with a colored square for each interval.
+                for (var i = 0; i < grades.length; i++) {
+                    div.innerHTML +=
+                    '<i style="background:' + getColor(grades[i] + 1) + '"></i>' +
+                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] +   '<br><br>' : '+');
+                }
+        
+                return div;
+            };
+    
+            legend.addTo(map);
+
+                    
+
+            // Removing the legend when the layer is removed
+            map.on('overlayremove', function(eventLayer){
+                if (eventLayer.name == 'provinces'){ // We use the key/display name to refer to the layer
+                    map.removeControl(legend); // legend is the variable name of the layer legend
+                }
+            });
+
+            // Adding the legend when the layer is added
+            map.on('overlayadd', function(eventLayer){
+                if (eventLayer.name == 'provinces'){
+                    legend.addTo(map);
+                }
+            });
         </script>
-
    </body>
 
 </html>
