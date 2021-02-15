@@ -44,146 +44,146 @@
         <div id="map"></div>
         
         <script type="text/javascript">
-            //create leaflet map and add tile layer
-                var map = L.map('map', {
-                    center: [34.666, 104.9569],
-                    zoom: 
-                });
+        //create leaflet map and add tile layer
+            var map = L.map('map', {
+                center: [34.666, 104.9569],
+                zoom: 
+            });
 
-                L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
-                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                    subdomains: 'abcd',
-                    minZoom: 0,
-                    maxZoom: 20,
-                    ext: 'png'
-                }).addTo(map);
-
-
-            //set optional tile layers to variables for user selection
-                var imagery = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', {
-                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                    subdomains: 'abcd',
-                    minZoom: 0,
-                    maxZoom: 18,
-                    ext: 'png'
-                });
-
-                var base = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
-                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                    subdomains: 'abcd',
-                    minZoom: 0,
-                    maxZoom: 20,
-                    ext: 'png'
-                }).addTo(map);
+            L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abcd',
+                minZoom: 0,
+                maxZoom: 20,
+                ext: 'png'
+            }).addTo(map);
 
 
-            //functions for styling and displaying province data features
-                function getColor(value) {
-                    return value > 50000000 ? '#54278f':
-                        value > 25000000  ? '#756bb1':
-                        value > 10000000  ? '#9e9ac8':
-                        value > 5000000  ? '#cbc9e2':
-                                            '#f2f0f7';
-                }
+        //set optional tile layers to variables for user selection
+            var imagery = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', {
+                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abcd',
+                minZoom: 0,
+                maxZoom: 18,
+                ext: 'png'
+            });
 
-                function provincesStyle(feature){
-                    return {
-                        fillColor: getColor(feature.properties.POP10),
-                        weight: 2,
-                        opacity: 1,
-                        color: 'gray',
-                        fillOpacity: 0.9
-                    };
-                }
+            var base = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
+                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abcd',
+                minZoom: 0,
+                maxZoom: 20,
+                ext: 'png'
+            }).addTo(map);
 
 
-            //functions for styling and displaying covid data features
-                function calcRadius(val) {
-                    var minValue = 100;
-                    var minRadius = 5;
+        //functions for styling and displaying province data features
+            function getColor(value) {
+                return value > 50000000 ? '#54278f':
+                    value > 25000000  ? '#756bb1':
+                    value > 10000000  ? '#9e9ac8':
+                    value > 5000000  ? '#cbc9e2':
+                                        '#f2f0f7';
+            }
 
-                    return 0.9 * Math.pow(val/minValue, .7) * minRadius;
-                }
-
-                function covidPoint(feature, ll){
-                    return L.circleMarker(ll, {
-                        color: '#000000',
-                        opacity: 1,
-                        weight: 2,
-                        fillColor: '#808080',
-                        fillOpacity: .5,
-                    //radius: 10
-                        radius: calcRadius(feature.properties.covid)
-                    });
-                }
-
-
-            //popups on covid data features
-                var onEachFeature = function(feature, layer) {
-                    if (feature.properties) {
-                        var prop = feature.properties;
-                        var popup = '<h3>'+prop['Location']+'</h3>'+'<br>Cases Day 1: '+prop['1']+'<br>Cases Day 16: '+prop['covid'];
-                        feature.layer = layer;
-                        layer.bindPopup(popup, {maxWidth: "auto"});
-                    }
-                };  
-
-
-            //add geoJSON layers to map
-                var provinces = new L.geoJson(provinces, {style:provincesStyle}).addTo(map);
-
-                var covidData = new L.geoJson(covidData, {onEachFeature: onEachFeature, pointToLayer: covidPoint}).addTo(map);
-
-
-            //name layers and add toggle control options
-                var basemaps = {
-                    "Light Canvas": base,
-                    "Satellite Imagery": imagery
+            function provincesStyle(feature){
+                return {
+                    fillColor: getColor(feature.properties.POP10),
+                    weight: 2,
+                    opacity: 1,
+                    color: 'gray',
+                    fillOpacity: 0.9
                 };
-
-                var overlaymaps = {
-                    "China Provinces": provinces,
-                    "Covid Data": covidData
-                };
-
-                L.control.layers(basemaps, overlaymaps, {collapsed:false}).addTo(map);
+            }
 
 
-            //add Legend to map
-                var legend = L.control({position: 'bottomright'}); // Try the other lower corner if you prefer.
+        //functions for styling and displaying covid data features
+            function calcRadius(val) {
+                var minValue = 100;
+                var minRadius = 5;
 
-                legend.onAdd = function (map) {
-                var div = L.DomUtil.create('div', 'legend'),
-                    grades = [0, 5000000, 10000000, 25000000, 50000000]; // break values to define the intervals of population - YOU WILL NEED TO MODIFY IT TO GET THE RIGHT LEGEND BREAKS
-                    div.innerHTML = '<b>Population 2019 <br><br></b>';
+                return 0.9 * Math.pow(val/minValue, .7) * minRadius;
+            }
 
-                // Loop through the classes or “grades” and generate a label with a colored square for each interval.
-                    for (var i = 0; i < grades.length; i++) {
-                        div.innerHTML +=
-                        '<i style="background:' + getColor(grades[i] + 1) + '"></i>' +
-                        grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] +   '<br><br>' : '+');
-                    }
-
-                    return div;
-                };
-
-                legend.addTo(map);
-
-
-            // Removing the legend when the layer is removed
-                map.on('overlayremove', function(eventLayer){
-                    if (eventLayer.name == 'China Provinces'){ // We use the key/display name to refer to the layer
-                        map.removeControl(legend); // legend is the variable name of the layer legend
-                    }
+            function covidPoint(feature, ll){
+                return L.circleMarker(ll, {
+                    color: '#000000',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#808080',
+                    fillOpacity: .5,
+                //radius: 10
+                    radius: calcRadius(feature.properties.covid)
                 });
+            }
 
 
-            // Adding the legend when the layer is added
-                map.on('overlayadd', function(eventLayer){
-                    if (eventLayer.name == 'China Provinces'){
-                        legend.addTo(map);
-                    }
-                });
+        //popups on covid data features
+            var onEachFeature = function(feature, layer) {
+                if (feature.properties) {
+                    var prop = feature.properties;
+                    var popup = '<h3>'+prop['Location']+'</h3>'+'<br>Cases Day 1: '+prop['1']+'<br>Cases Day 16: '+prop['covid'];
+                    feature.layer = layer;
+                    layer.bindPopup(popup, {maxWidth: "auto"});
+                }
+            };  
+
+
+        //add geoJSON layers to map
+            var provinces = new L.geoJson(provinces, {style:provincesStyle}).addTo(map);
+
+            var covidData = new L.geoJson(covidData, {onEachFeature: onEachFeature, pointToLayer: covidPoint}).addTo(map);
+
+
+        //name layers and add toggle control options
+            var basemaps = {
+                "Light Canvas": base,
+                "Satellite Imagery": imagery
+            };
+
+            var overlaymaps = {
+                "China Provinces": provinces,
+                "Covid Data": covidData
+            };
+
+            L.control.layers(basemaps, overlaymaps, {collapsed:false}).addTo(map);
+
+
+        //add Legend to map
+            var legend = L.control({position: 'bottomright'}); // Try the other lower corner if you prefer.
+
+            legend.onAdd = function (map) {
+            var div = L.DomUtil.create('div', 'legend'),
+                grades = [0, 5000000, 10000000, 25000000, 50000000]; // break values to define the intervals of population - YOU WILL NEED TO MODIFY IT TO GET THE RIGHT LEGEND BREAKS
+                div.innerHTML = '<b>Population 2019 <br><br></b>';
+
+            // Loop through the classes or “grades” and generate a label with a colored square for each interval.
+                for (var i = 0; i < grades.length; i++) {
+                    div.innerHTML +=
+                    '<i style="background:' + getColor(grades[i] + 1) + '"></i>' +
+                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] +   '<br><br>' : '+');
+                }
+
+                return div;
+            };
+
+            legend.addTo(map);
+
+
+        // Removing the legend when the layer is removed
+            map.on('overlayremove', function(eventLayer){
+                if (eventLayer.name == 'China Provinces'){ // We use the key/display name to refer to the layer
+                    map.removeControl(legend); // legend is the variable name of the layer legend
+                }
+            });
+
+
+        // Adding the legend when the layer is added
+            map.on('overlayadd', function(eventLayer){
+                if (eventLayer.name == 'China Provinces'){
+                    legend.addTo(map);
+                }
+            });
         </script>
    </body>
 
