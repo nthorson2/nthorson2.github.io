@@ -114,8 +114,8 @@
             };
 
             L.control.layers(basemaps, overlaymaps, {collapsed:false}).addTo(map);
-
             
+            // add Legend to map
             var legend = L.control({position: 'bottomright'}); // Try the other lower corner if you prefer.
 
             legend.onAdd = function (map) {
