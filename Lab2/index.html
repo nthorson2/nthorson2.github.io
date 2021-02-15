@@ -150,7 +150,7 @@
 
             // Removing the legend when the layer is removed
             map.on('overlayremove', function(eventLayer){
-                if (eventLayer.name == 'provinces'){ // We use the key/display name to refer to the layer
+                if (eventLayer.name == 'China Provinces'){ // We use the key/display name to refer to the layer
                     map.removeControl(legend); // legend is the variable name of the layer legend
                 }
             });
