@@ -157,7 +157,7 @@
                     grades = [0, 5000000, 10000000, 25000000, 50000000];
                     div.innerHTML = '<b>Population 2019 <br><br></b>';
 
-                // Loop through the classes or “grades” and generate a label with a colored square for each interval.
+                //Loop through the classes or “grades” and generate a label with a colored square for each interval.
                     for (var i = 0; i < grades.length; i++) {
                         div.innerHTML +=
                         '<i style="background:' + getColor(grades[i] + 1) + '"></i>' +
@@ -170,7 +170,7 @@
                 legend.addTo(map);
 
 
-            // Remove legend when layer is removed
+            //Remove legend when layer is removed
                 map.on('overlayremove', function(eventLayer){
                     if (eventLayer.name == 'China Provinces'){ 
                         map.removeControl(legend); 
@@ -178,7 +178,7 @@
                 });
 
 
-            // Add legend when layer is added
+            //Add legend when layer is added
                 map.on('overlayadd', function(eventLayer){
                     if (eventLayer.name == 'China Provinces'){
                         legend.addTo(map);
