@@ -122,15 +122,15 @@
                 var onEachFeature = function(feature, layer) {
                     if (feature.properties) {
                         var prop = feature.properties;
-                        var caseStart = prop['1'].length;
-                        var caseLast = prop['covid'].length;
+                        var caseStart = String(prop['1']).length;
+                        var caseLast = String(prop['covid']).length;
                         if (caseStart<caseLast){
                             var wdth = (14 * 8) + (caseLast * 8);
                         }else{
                             var wdth = (13 * 8) + (caseStart * 8);
                         }
-                        if(prop['Location'].length > wdth){
-                            var wdth = (prop['Location'].length * 8);
+                        if(String(prop['Location']).length > wdth){
+                            var wdth = (String(prop['Location']).length * 8);
                         }
                         var style = "width: " + wdth + "px;";
                         var popup = '<h3>'+prop['Location']+'</h3>'+'<br style='+style+'>Cases Day 1: '+prop['1']+'<br style='+style+'>Cases Day 16: '+prop['covid'];
