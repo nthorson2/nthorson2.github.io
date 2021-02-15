@@ -125,17 +125,9 @@
                 var onEachFeature = function(feature, layer) {
                     if (feature.properties) {
                         var prop = feature.properties;
-                        var caseStart = String(prop['1']).length;
-                        var caseLast = String(prop['covid']).length;
-                        if (caseStart<caseLast){
-                            var wdth = (14 * 8) + (caseLast * 8);
-                        }else{
-                            var wdth = (13 * 8) + (caseStart * 8);
-                        }
                         var popup = '<h3>'+prop['Location']+'</h3>'+'<br>Cases Day 1: '+prop['1']+'<br>Cases Day 16: '+prop['covid'];
                         feature.layer = layer;
                         layer.bindPopup(popup, {maxWidth: "auto"});
-                        layer.popup.style.width = wdth + "px";
                     }
                 };  
 
