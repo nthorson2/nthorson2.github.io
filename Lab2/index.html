@@ -38,8 +38,7 @@
                 subdomains: 'abcd',
                 minZoom: 0,
                 maxZoom: 20,
-                ext: 'png',
-                zIndex: 100
+                ext: 'png'
             }).addTo(map);
             
             var imagery = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', {
@@ -47,8 +46,7 @@
                 subdomains: 'abcd',
                 minZoom: 0,
                 maxZoom: 18,
-                ext: 'png',
-                zIndex: 100
+                ext: 'png'
             });
 
             var base = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
@@ -56,8 +54,7 @@
                 subdomains: 'abcd',
                 minZoom: 0,
                 maxZoom: 20,
-                ext: 'png',
-                zIndex: 100
+                ext: 'png'
             }).addTo(map);
           
             function getColor(value) {
@@ -74,8 +71,7 @@
                     weight: 2,
                     opacity: 1,
                     color: 'gray',
-                    fillOpacity: 0.9,
-                    zIndex: 150
+                    fillOpacity: 0.9
                 };
             }
           
@@ -93,7 +89,6 @@
                     weight: 2,
                     fillColor: '#808080',
                     fillOpacity: .5,
-                    zIndex: 200,
                 //radius: 10
                     radius: calcRadius(feature.properties.covid)
                 });
