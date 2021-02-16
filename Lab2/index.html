@@ -182,8 +182,10 @@
                 map.on('overlayadd', function(eventLayer){
                     if (eventLayer.name == 'China Provinces'){
                         legend.addTo(map);
-                        covidData.remove();
-                        covidData.addTo(map);
+                        if(map.hasLayer(covidData){
+                            covidData.remove();
+                            covidData.addTo(map);
+                        }
                     }
                 });
         </script>
