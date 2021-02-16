@@ -182,7 +182,9 @@
                 map.on('overlayadd', function(eventLayer){
                     if (eventLayer.name == 'China Provinces'){
                         legend.addTo(map);
+                        //check if point layer is active and add layer before polygon layer
                         if(map.hasLayer(covidData)){
+                        //prevent point layer from being hidden behind polygon features layer
                             covidData.remove();
                             covidData.addTo(map);
                         }
