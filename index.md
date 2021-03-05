@@ -21,7 +21,7 @@
 				</ul>
 			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab3">Lab 3</a></li>
 				<ul>
-					<li><a href="https://nthorson2.github.io/Lab3/index.html">Assignment 3</a></li>
+					<li><a href="https://nthorson2.github.io/Lab3/src/index.html">Assignment 3</a></li>
 				</ul>
 		</ul>
 	</body>
