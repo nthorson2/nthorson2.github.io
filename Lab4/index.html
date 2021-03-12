@@ -8,18 +8,36 @@
 		<link rel="stylesheet" href="https://js.arcgis.com/4.14/esri/themes/light/main.css"/>
 		<script src="https://js.arcgis.com/4.14/"></script>
 		<script>
-			require(["esri/Map", "esri/views/MapView"], function(Map, MapView) {
-				var map = new Map({
-					basemap: "streets"
-				});
+			require([
+				"esri/Map",
+				"esri/layers/TileLayer",
+				"esri/layers/GeoJSONLayer",
+				"esri/views/MapView"], 
+				function(Map,TileLayer,GeoJSONLayer,MapView) {	
+					const url = "https://opendata.arcgis.com/datasets/5aa5f17d117f409d8608ec1bf6de06d6_0.geojson";
+				
+					const geojsonLayer = new GeoJSONLayer({
+						url: url,
+						copyright: “GEOG 417/817”
+						//renderer info would go here, and you add a comma to the field above
+					});
+				
+					var thebasemap = new TileLayer({
+						url:"https://gisext.lincoln.ne.gov/arcgis/rest/services/GIS/LancoBasemap/MapServer/"
+					});
+				
+					var map = new Map({
+						basemap: "streets"
+					});
 
-				var view = new MapView({
-					container: "viewDiv",
-					map: map,
-					zoom: 17,
-					center: [-96.68, 40.81] // longitude, latitude – change this as needed
-				});
-			});
+					var view = new MapView({
+						container: "viewDiv",
+						map: map,
+						zoom: 17,
+						center: [-96.68, 40.81] // longitude, latitude – change this as needed
+					});
+				}
+			);
 		</script>
 	</head>
 	<body>
