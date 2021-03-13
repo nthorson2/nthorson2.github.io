@@ -19,38 +19,38 @@
 					const url = "https://opendata.arcgis.com/datasets/5aa5f17d117f409d8608ec1bf6de06d6_0.geojson";
 					
 					const renderer = {
-					  	type: "simple",
-					  	field: "CNTASSDVAL",
-					    	legendOptions: {title: "Assessed values in Lincoln"},
-					  	symbol: {
-					    		type: "simple-marker",
-					    		color: "yellow",
-					    		outline: {
-					      			color: "black"
-					    		}
+						type: "simple",
+						field: "CNTASSDVAL",
+						legendOptions: {title: "Assessed values in Lincoln"},
+						symbol: {
+							type: "simple-marker",
+							color: "yellow",
+							outline: {
+								color: "black"
+							}
 						},
 						visualVariables: [{
 							type: "size",
-					      		field: "CNTASSDVAL",
-					      		stops: [{
+							field: "CNTASSDVAL",
+							stops: [{
 								value: 25000,
-						   		size: "5px",
-						 		label: "Under 25,000"
+								size: "5px",
+								label: "Under 25,000"
 							},
 							{
-						   		value: 100000,
-						    		size: "10px",
-						  		label: "20,000 to 99,999"
-							},
-					     		{
-						 		value: 500000,
-						     		size: "15px",
-						   		label: "100,000 to 500,000"
+								value: 100000,
+								size: "10px",
+								label: "20,000 to 99,999"
 							},
 							{
-						    		value: 2500000,
-						     		size: "25px",
-						   		label: "Astronomical"
+								value: 500000,
+								size: "15px",
+								label: "100,000 to 500,000"
+							},
+							{
+								value: 2500000,
+								size: "25px",
+								label: "Astronomical"
 							}]
 						}]
 					};
