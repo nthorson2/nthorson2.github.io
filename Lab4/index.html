@@ -81,6 +81,8 @@
 						center: [-96.68, 40.81] // longitude, latitude – change this as needed
 					});
 				
+					map.add(featureLayer);
+				
 					const legend = new Legend({
 						view:view,
 						layerInfos:[{
@@ -88,8 +90,6 @@
 							title:"Legend"
 						}]
 					});
-				
-					map.add(featureLayer);
 				
 					//view.ui.add(legend,"bottom-right");
 				}
