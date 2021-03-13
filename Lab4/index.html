@@ -12,19 +12,62 @@
 				"esri/Map",
 				"esri/layers/TileLayer",
 				"esri/layers/GeoJSONLayer",
-				"esri/views/MapView"], 
-				function(Map,TileLayer,GeoJSONLayer,MapView) {	
+				"esri/views/MapView", 
+				"esri/layers/FeatureLayer",
+				"esri/widgets/Legend"
+				],function(Map,TileLayer,GeoJSONLayer,MapView,Legend,FeatureLayer) {	
 					const url = "https://opendata.arcgis.com/datasets/5aa5f17d117f409d8608ec1bf6de06d6_0.geojson";
-				
-					const geojsonLayer = new GeoJSONLayer({
-						url: url,
-						copyright: "GEOG 417/817"
-						//renderer info would go here, and you add a comma to the field above
-					});
+					
+					const renderer = {
+					  	type: "simple",
+					  	field: "CNTASSDVAL",
+					    	legendOptions: {title: "Assessed values in Lincoln"},
+					  	symbol: {
+					    		type: "simple-marker",
+					    		color: "yellow",
+					    		outline: {
+					      			color: "black"
+					    		}
+						},
+						visualVariables: [{
+							type: "size",
+					      		field: "CNTASSDVAL",
+					      		stops: [{
+								value: 25000,
+						   		size: "5px",
+						 		label: "Under 25,000"
+							},
+							{
+						   		value: 100000,
+						    		size: "10px",
+						  		label: "20,000 to 99,999"
+							},
+					     		{
+						 		value: 500000,
+						     		size: "15px",
+						   		label: "100,000 to 500,000"
+							},
+							{
+						    		value: 2500000,
+						     		size: "25px",
+						   		label: "Astronomical"
+							}]
+						}]
+					};
 				
 					var thebasemap = new TileLayer({
 						url:"https://gisext.lincoln.ne.gov/arcgis/rest/services/GIS/LancoBasemap/MapServer/"
 					});
+				
+					const geojsonLayer = new GeoJSONLayer({
+						url: url,
+						copyright: "GEOG 417/817",
+						renderer: renderer
+					});
+				
+					var featureLayer = new FeatureLayer({
+  						url:"https://gisext.lincoln.ne.gov/arcgis/rest/services/Parks/Park_Boundaries/MapServer/0"
+					});	
 				
 					var map = new Map({
 						layers:[thebasemap,geojsonLayer]
@@ -36,6 +79,18 @@
 						zoom: 17,
 						center: [-96.68, 40.81] // longitude, latitude – change this as needed
 					});
+				
+					const legend = new Legend({
+						view:view,
+						layerInfos:[{
+							layer:geojsonLayer,
+							title:"Legend"
+						}]
+					});
+				
+					map.add(featureLayer);
+				
+					view.ui.add(legend,"bottom-right");
 				}
 			);
 		</script>
