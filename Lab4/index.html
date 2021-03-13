@@ -51,7 +51,7 @@
 					};
 				
 					var thebasemap = new TileLayer({
-						url:"https://gisext.lincoln.ne.gov/arcgis/rest/services/GIS/LancoBasemap/MapServer/"
+						url: "https://gisext.lincoln.ne.gov/arcgis/rest/services/GIS/LancoBasemap/MapServer/"
 					});
 				
 					const geojsonLayer = new GeoJSONLayer({
@@ -61,12 +61,11 @@
 					});
 				
 					var featureLayer = new FeatureLayer({
-  						url:
-						"https://gisext.lincoln.ne.gov/arcgis/rest/services/Parks/Park_Boundaries/MapServer/0"
+  						url: "https://gisext.lincoln.ne.gov/arcgis/rest/services/Parks/Park_Boundaries/MapServer/0"
 					});	
 				
 					var map = new Map({
-						layers:[thebasemap,geojsonLayer]
+						layers: [thebasemap,geojsonLayer]
 					});
 
 					var view = new MapView({
@@ -77,10 +76,10 @@
 					});
 				
 					const legend = new Legend({
-						view:view,
-						layerInfos:[{
-							layer:geojsonLayer,
-							title:"Lab 6 Symbols"
+						view: view,
+						layerInfos: [{
+							layer: geojsonLayer,
+							title: "Lab 6 Symbols"
 						}]
 					});
 				
