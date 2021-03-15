@@ -64,8 +64,10 @@
 
 
             //set optional tile layers to variables for user selection
-                var imagery = L.esri.basemapLayer('ImageryTransportation','Imagery').addTo(map);
-
+                var imageryBase = L.esri.basemapLayer('Imagery').addTo(map);
+                var imageryOverlay = L.esri.basemapLayer('ImageryTransportation').addTo(map);    
+                var imagery = L.layerGroup([imageryBase,imageryOverlay]).addTo(map);
+            
                 var base = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
                     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                     subdomains: 'abcd',
