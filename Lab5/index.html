@@ -12,72 +12,72 @@
             <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
             <script>
               var attribution = new ol.control.Attribution({
-                collapsible: false
+                  collapsible: false
               });
 
               var map = new ol.Map({
-                controls: ol.control.defaults({attribution: false}).extend([attribution]),
-                layers: [
-                  new ol.layer.Tile({
-                    source: new ol.source.OSM({
-                      url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                      attributions: [ ol.source.OSM.ATTRIBUTION, 'Put your name here' ],
-                      maxZoom: 19
-                    })
-                  })
-                ],
-                target: 'map',
-                  view: new ol.View({
-                    center: ol.proj.fromLonLat([-96.6607, 40.8073]),
-                    maxZoom: 18,
-                    zoom: 15
-                  })
-                });
+                  controls: ol.control.defaults({attribution: false}).extend([attribution]),
+                  layers: [
+                        new ol.layer.Tile({
+                              source: new ol.source.OSM({
+                                    url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                                    attributions: [ ol.source.OSM.ATTRIBUTION, 'Put your name here' ],
+                                    maxZoom: 19
+                              })
+                        })
+                  ],
+                  target: 'map',
+                        view: new ol.View({
+                              center: ol.proj.fromLonLat([-96.6607, 40.8073]),
+                              maxZoom: 18,
+                              zoom: 15
+                        })
+                  });
              
-                var layer = new ol.layer.Vector({
-                  source: new ol.source.Vector({
-                    features: [
-                      new ol.Feature({
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-96.6607, 40.8073]))
-                      })
-                    ]
-                  })
-                });
+                  var layer = new ol.layer.Vector({
+                        source: new ol.source.Vector({
+                              features: [
+                                    new ol.Feature({
+                                          geometry: new ol.geom.Point(ol.proj.fromLonLat([-96.6607, 40.8073]))
+                                    })
+                              ]
+                        })
+                  });
 
-                map.addLayer(layer);
+                  map.addLayer(layer);
                      
-                var container = document.getElementById('popup');
+                  var container = document.getElementById('popup');
 
-                var content = document.getElementById('popup-content');
+                  var content = document.getElementById('popup-content');
 
-                var closer = document.getElementById('popup-closer');
+                  var closer = document.getElementById('popup-closer');
 
-                var overlay = new ol.Overlay({
-                  element: container,
-                  autoPan: true,
-                  autoPanAnimation: {
-                    duration: 250
-                  }
-                });
+                  var overlay = new ol.Overlay({
+                        element: container,
+                        autoPan: true,
+                        autoPanAnimation: {
+                              duration: 250
+                        }
+                  });
 
-                map.addOverlay(overlay);
+                  map.addOverlay(overlay);
 
-                closer.onclick = function() {
-                  overlay.setPosition(undefined);
-                  closer.blur();
-                  return false;
-                };
+                  closer.onclick = function() {
+                        overlay.setPosition(undefined);
+                        closer.blur();
+                        return false;
+                  };
               
-                map.on('singleclick', function (event) {   
-                  if (map.hasFeatureAtPixel(event.pixel) === true) {
-                    var coordinate = event.coordinate;
-                    content.innerHTML = '<b>Hello world!</b><br />I am a popup.';
-                    overlay.setPosition(coordinate);
-                  } else {
-                    overlay.setPosition(undefined);
-                    closer.blur();
-                  }
-                });
+                  map.on('singleclick', function (event) {   
+                        if (map.hasFeatureAtPixel(event.pixel) === true) {
+                              var coordinate = event.coordinate;
+                              content.innerHTML = '<b>Hello world!</b><br />I am a popup.';
+                              overlay.setPosition(coordinate);
+                        } else {
+                              overlay.setPosition(undefined);
+                              closer.blur();
+                        }
+                  });
             </script>
       </body>
 </html>
