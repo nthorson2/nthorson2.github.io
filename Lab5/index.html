@@ -38,10 +38,12 @@
                         source: new ol.source.Vector({
                               features: [
                                     new ol.Feature({
-                                          geometry: new ol.geom.Point(ol.proj.fromLonLat([-96.66894, 40.8313])),
-                                          size: 15
+                                          geometry: new ol.geom.Point(ol.proj.fromLonLat([-96.66894, 40.8313]))
                                     })
                               ]
+                        })
+                        Style: new ol.style.Icon({
+                              size: 15
                         })
                   });
 
