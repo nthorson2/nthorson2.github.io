@@ -41,12 +41,16 @@
                                           geometry: new ol.geom.Point(ol.proj.fromLonLat([-96.66894, 40.8313]))
                                     })
                               ]
-                        })//,
-                        //style: new ol.style.Style({ 
-                        //      geometry: new ol.style.Circle({
-                        //            radius: 5
-                        //      })
-                        //})
+                        }),
+                        style: new Style({
+                              image: new CircleStyle({
+                                    fill: fill,
+                                    stroke: stroke,
+                                    radius: 15
+                              }),
+                              fill: fill,
+                              stroke: stroke
+                        })
                   });
 
                   map.addLayer(layer);
