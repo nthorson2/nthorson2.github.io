@@ -3,6 +3,11 @@
       <head>
             <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
       </head>
+      <style>
+            .ol-popup {
+                  background-color: 'rgba(255,255,255,0.4)';
+            }
+      </style>
       <body>
             <div id="map" style="width: 1400px; height: 900px;"></div>
             <div id="popup" class="ol-popup">
@@ -79,10 +84,12 @@
                   };
               
                   map.on('singleclick', function (event) {   
+                        var overlayStyle = new ol.style.Style(
                         if (map.hasFeatureAtPixel(event.pixel) === true) {
                               var coordinate = event.coordinate;
                               content.innerHTML = '<b>Chase Hall - <i>BSE</i></b>'+'<br><i>East Campus</i></br>'+'<br><i>University of Nebraska-Lincoln</i></br>'+
                                                       '<br><i>200 L.W. Chase Hall</i></br>';
+                              
                               overlay.setPosition(coordinate);
                         } else {
                               overlay.setPosition(undefined);
