@@ -94,9 +94,9 @@
                   map.on('singleclick', function (event) {   
                         if (map.hasFeatureAtPixel(event.pixel) === true) {
                               var coordinate = event.coordinate;
-                              content.innerHTML = '<b>Chase Hall - <i>BSE</i></b>'+'<br> </br>'+'<b><i>East Campus</i></b>'+
-                                                      '<b><i>University of Nebraska-Lincoln</i></b>'+
-                                                      '<b><i>200 L.W. Chase Hall</i></b>';
+                              content.innerHTML = '<b>Chase Hall - <i>BSE</i></b>'+'<br> </br>'+'<i>East Campus</i>'+
+                                                      '<i>University of Nebraska-Lincoln</i>'+
+                                                      '<i>200 L.W. Chase Hall</i>';
                               
                               overlay.setPosition(coordinate);
                         } else {
