@@ -32,7 +32,8 @@
                   layers: [
                         new ol.layer.Tile({
                               source: new ol.source.OSM({
-                                    url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                                    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/' +
+                                          'World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
                                     attributions: [ ol.source.OSM.ATTRIBUTION, 'NathanThorson' ],
                                     maxZoom: 19
                               })
