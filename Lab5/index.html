@@ -5,7 +5,7 @@
       </head>
       <style>
             .ol-popup {
-                  background-color: rgba(240,240,240,0.8);
+                  background-color: rgba(240,240,240,0.6);
                   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
                   padding: 15px;
                   border-radius: 10px;
@@ -94,7 +94,8 @@
                   map.on('singleclick', function (event) {   
                         if (map.hasFeatureAtPixel(event.pixel) === true) {
                               var coordinate = event.coordinate;
-                              content.innerHTML = '<b>Chase Hall - <i>BSE</i></b>'+'<br><i>East Campus</i></br>'+'<br><i>University of Nebraska-Lincoln</i></br>'+
+                              content.innerHTML = '<b>Chase Hall - <i>BSE</i></b>'+'<br></br>'='<br><i>East Campus</i></br>'+
+                                                      '<br><i>University of Nebraska-Lincoln</i></br>'+
                                                       '<br><i>200 L.W. Chase Hall</i></br>';
                               
                               overlay.setPosition(coordinate);
