@@ -70,9 +70,11 @@
             .on("mouseover",function(d){
                d3.select("h2").text("Built in " + d.properties.RESYRBLT);
                d3.select(this).attr("class","buildingdata hover");
-
             })
-         
+            .on("mouseout", function(d){
+              d3.select("h2").text("");
+              d3.select(this).attr("class","buildingdata");
+            });
       </script>
    </body>
 </html>
