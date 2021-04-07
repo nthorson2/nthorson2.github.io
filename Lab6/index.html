@@ -10,29 +10,29 @@
          var width = 1000;
          var height = 600;
          
-         var svg = d3.select( “body” )
-            .append( “svg” )
-            .attr( “width”, width )
-            .attr( “height”, height );
+         var svg = d3.select(“body”)
+            .append(“svg”)
+            .attr(“width”, width)
+            .attr(“height”, height);
          
-         var g = svg.append( "g" );
+         var g = svg.append("g");
          
          var albersProjection = d3.geoAlbers()
-            .scale( 2850000 )
-            .rotate( [96.6327,0] )
-            .center( [0, 40.8497493] )   
-            .translate( [width/2,height/2] );
+            .scale(2850000)
+            .rotate([96.6327,0])
+            .center([0, 40.8497493])   
+            .translate([width/2,height/2]);
          
          var geoPath = d3.geoPath()
-            .projection( albersProjection )
+            .projection(albersProjection)
          
-         g.selectAll( "path" )
-            .data( lnkrds.features )
+         g.selectAll("path")
+            .data(lnkrds.features)
             .enter()
-            .append( "path" )
-            .attr( "fill", "#ccc" )
-            .attr( "stroke", "#333")
-            .attr( "d", geoPath );
+            .append("path")
+            .attr("fill", "#ccc")
+            .attr("stroke", "#333")
+            .attr("d", geoPath);
          
       </script>
    </body>
