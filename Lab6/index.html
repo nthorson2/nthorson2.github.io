@@ -4,6 +4,7 @@
       <title>Lab 6 | D3</title>
       <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
       <script src="https://rshepard2.github.io/Lab9/data/lnkrds.js"></script>
+      <script src="https://rshepard2.github.io/Lab9/data/northeast_lnk_blds.js"></script>
    </head>
    <body>
       <script>
@@ -11,9 +12,9 @@
          var height = 600;
          
          var svg = d3.select("body")
-         .append("svg")
-         .attr("width", width)
-         .attr("height", height);
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
          
          var g = svg.append("g");
          
@@ -33,6 +34,16 @@
             .attr("fill", "#ccc")
             .attr("stroke", "#333")
             .attr("d", geoPath);
+         
+         var lnk_json = svg.append("g");
+         
+         lnk_json.selectAll( "path" )
+            .data( lnkbldngsjson.features )
+            .enter()
+            .append( "path" )
+            .attr( "fill", "#900" )
+            .attr( "stroke", "#999" )
+            .attr( "d", geoPath );
          
       </script>
    </body>
