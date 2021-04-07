@@ -26,6 +26,14 @@
          var geoPath = d3.geoPath()
             .projection( albersProjection )
          
+         g.selectAll( "path" )
+            .data( lnkrds.features )
+            .enter()
+            .append( "path" )
+            .attr( "fill", "#ccc" )
+            .attr( "stroke", "#333")
+            .attr( "d", geoPath );
+         
       </script>
    </body>
 </html>
