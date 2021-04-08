@@ -4,7 +4,7 @@
       <title>Lab 6 | D3</title>
       <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
       <script src="https://rshepard2.github.io/Lab9/data/lnkrds.js"></script>
-      <script src="https://rshepard2.github.io/Lab9/data/northeast_lnk_blds.js"></script>
+      <script src="https://nthorson2.github.io/Lab6/lab6_UserMap/Metro_Streams.js"></script>
       <style>
          body {
             position: absolute;
@@ -36,8 +36,8 @@
          var lowColor = '#bc2a66'
          var highColor = '#f9f9f9'
          
-         var minVal = 1900
-         var maxVal = 2020
+         var minVal = 334
+         var maxVal = 558
          
          var ramp = d3.scaleLinear().domain([minVal,maxVal]).range([lowColor,highColor]);
         
@@ -65,23 +65,23 @@
             .attr("stroke", "#333")
             .attr("d", geoPath);
          
-         var lnk_json = svg.append("g");
+         var mStreams_json = svg.append("g");
          
-         lnk_json.selectAll("path")
-            .data( lnkbldngsjson.features )
+         mStreams_json.selectAll("path")
+            .data(MetroStreams.features )
             .enter()
             .append("path")
-            .attr("fill", function(d){return ramp(d.properties.RESYRBLT)})
+            .attr("fill", function(d){return ramp(d.properties.FType)})
             .attr("stroke", "#999")
             .attr("d", geoPath)
-            .attr("class","buildingdata")
+            .attr("class","streamdata")
             .on("mouseover",function(d){
-               d3.select("h2").text("Built in " + d.properties.RESYRBLT);
-               d3.select(this).attr("class","buildingdata hover");
+               d3.select("h2").text("Stream Name: " + d.properties.GNIS_Name);
+               d3.select(this).attr("class","streamdata hover");
             })
             .on("mouseout", function(d){
               d3.select("h2").text("");
-              d3.select(this).attr("class","buildingdata");
+              d3.select(this).attr("class","streamdata");
             
             
             });
