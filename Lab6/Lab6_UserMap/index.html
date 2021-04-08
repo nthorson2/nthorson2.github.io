@@ -68,7 +68,7 @@
          var mStreams_json = svg.append("g");
          
          mStreams_json.selectAll("path")
-            .data(MetroStreams.features )
+            .data(metroStreams.features )
             .enter()
             .append("path")
             .attr("fill", function(d){return ramp(d.properties.FType)})
