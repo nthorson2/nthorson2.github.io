@@ -34,7 +34,7 @@
 			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab6">Lab 6</a></li>
 				<ul>
 					<li><a href="https://nthorson2.github.io/Lab6/Lab6_Exercise/index.html">Assignment 6 Exercise</a></li>
-					<li><a href="https://nthorson2.github.io/Lab6/Lab6_OwnMap/index.html">Assignment 6 User Map</a></li>
+					<li><a href="https://nthorson2.github.io/Lab6/Lab6_UserMap/index.html">Assignment 6 UserMap</a></li>
 				</ul>
 		</ul>
 	</body>
