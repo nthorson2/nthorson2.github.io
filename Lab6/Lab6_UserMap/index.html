@@ -3,8 +3,9 @@
    <head>
       <title>Lab 6 | D3</title>
       <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
-      <script src="https://rshepard2.github.io/Lab9/data/lnkrds.js"></script>
       <script src="https://nthorson2.github.io/Lab6/Lab6_UserMap/metroStreams.js"></script>
+      <script src="https://nthorson2.github.io/Lab6/Lab6_UserMap/omahaCityLimits.js"></script>
+      <script src="https://nthorson2.github.io/Lab6/Lab6_UserMap/lincolnCityLimits.js"></script>
       <style>
          body {
             position: absolute;
@@ -58,7 +59,15 @@
             .projection(albersProjection)
          
          g.selectAll("path")
-            .data(lnkrds.features)
+            .data(omaCtyLimits.features)
+            .enter()
+            .append("path")
+            .attr("fill", "#ccc")
+            .attr("stroke", "#333")
+            .attr("d", geoPath);
+         
+         g.selectAll("path")
+            .data(linCityLimits.features)
             .enter()
             .append("path")
             .attr("fill", "#ccc")
