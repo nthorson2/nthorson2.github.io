@@ -49,9 +49,6 @@
          
          var g = svg.append("g");
          
-         g.attr("width", width/2);
-         g.attr("height", height/2);
-         
          var albersProjection = d3.geoAlbers()
             .scale(35000)
             .rotate([96.2906,0])
@@ -85,6 +82,8 @@
             .append("path")
             .attr("stroke", function(d){return ramp(d.properties.FType)})
             .attr("d", geoPath)
+            .attr("width", width)
+            .attr("height", height)
             .attr("class","streamdata")
             .on("mouseover",function(d){
                d3.select("h2").text("Stream Name: " + d.properties.GNIS_Name);
