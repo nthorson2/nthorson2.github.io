@@ -32,7 +32,7 @@
       <h2></h2>
       <script>
          var width = 1600;
-         var height = 900;
+         var height = 1000;
          
          var lowColor = '#0082FF'
          var highColor = '#003467'
@@ -53,7 +53,7 @@
             .scale(25000)
             .rotate([96.2906,0])
             .center([0, 41.01]);
-            //.translate([width/2,height/2]);
+            .translate([width/2,height/2]);
          
          var geoPath = d3.geoPath()
             .projection(albersProjection)
