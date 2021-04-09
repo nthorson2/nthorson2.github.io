@@ -80,7 +80,6 @@
             .data(metroStreams.features )
             .enter()
             .append("path")
-            .attr("fill", "#999")
             .attr("stroke", function(d){return ramp(d.properties.FType)})
             .attr("d", geoPath)
             .attr("class","streamdata")
