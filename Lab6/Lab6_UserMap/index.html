@@ -49,6 +49,9 @@
          
          var g = svg.append("g");
          
+         g.attr("width", width/2);
+         g.attr("height", height/2);
+         
          var albersProjection = d3.geoAlbers()
             .scale(35000)
             .rotate([96.2906,0])
