@@ -36,6 +36,11 @@
 					<li><a href="https://nthorson2.github.io/Lab6/Lab6_Exercise/index.html">Assignment 6 Exercise</a></li>
 					<li><a href="https://nthorson2.github.io/Lab6/Lab6_UserMap/index.html">Assignment 6 User Map</a></li>
 				</ul>
+			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab7">Lab 7</a></li>
+				<ul>
+					<li><a href="https://nthorson2.github.io/Lab7/part1/index.html">Assignment 7 Part 1</a></li>
+					<li><a href="https://nthorson2.github.io/Lab7/part2/index.html">Assignment 7 Part 2</a></li>
+				</ul>
 		</ul>
 	</body>
 </html>
