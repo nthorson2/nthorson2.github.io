@@ -57,7 +57,7 @@ function loadSceneView(){
 			  sceneLayer = webscene.layers.find(function(layer) {
 				return layer.title === "Yield Data";
 			  });
-			  sceneLayer.outFields = ["DryYield"];
+			  sceneLayer.outFields = ["DryYield","YieldWet","YieldMas","HarvestM","FuelRate"];
 
 			  view.whenLayerView(sceneLayer).then(function (layerView) {
 				sceneLayerView = layerView;
