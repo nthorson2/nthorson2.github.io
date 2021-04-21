@@ -288,8 +288,8 @@ function loadSceneView(){
 				//]);
 				updateChart(mcChart, [
 				  allStats.HarvestM_avg,
-				  allStats.HarvestM_max,
-				  allStats.HarvestM_min
+				  allStats.HarvestM_min,
+				  allStats.HarvestM_max
 				]);
 			  }, console.error);
 			}
