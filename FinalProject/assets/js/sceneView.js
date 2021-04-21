@@ -55,7 +55,7 @@ function loadSceneView(){
 			webscene.load().then(function() {
 
 			  sceneLayer = webscene.layers.find(function(layer) {
-				return layer.title === "YieldScene";
+				return layer.title === "F3514_16_2016_HarvestCorn_Raw_poly";
 			  });
 			  sceneLayer.outFields = ["DryYield","YieldWet","YieldMas","HarvestM","FuelRate"];
 
