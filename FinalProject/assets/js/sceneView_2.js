@@ -1,8 +1,8 @@
 function loadSceneView(){
 	require([
-		//"esri/portal/Portal",
-		//"esri/identity/OAuthInfo",
-		//"esri/identity/IdentityManager",
+		"esri/portal/Portal",
+		"esri/identity/OAuthInfo",
+		"esri/identity/IdentityManager",
 		"esri/WebScene",
 		"esri/views/SceneView",
 		"esri/layers/GraphicsLayer",
@@ -11,7 +11,7 @@ function loadSceneView(){
 		"esri/geometry/geometryEngine",
 		"esri/Graphic",
 		"esri/core/promiseUtils"
-	],function(WebScene,SceneView,GraphicsLayer,SketchViewModel,Slider,geometryEngine,Graphic,promiseUtils){
+	],function(Portal,OAuthInfo,esriId,WebScene,SceneView,GraphicsLayer,SketchViewModel,Slider,geometryEngine,Graphic,promiseUtils){
 		
 		//oathu2 authorization call
 		var info = new OAuthInfo({
