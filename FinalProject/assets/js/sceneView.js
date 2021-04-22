@@ -279,13 +279,6 @@ function loadSceneView(){
 
 			  return sceneLayerView.queryFeatures(query).then(function(result) {
 				const allStats = result.features[0].attributes;
-				//updateChart(materialChart, [
-				//  allStats.DryYield_avg,
-				//  allStats.YieldWet_avg,
-				//  allStats.YieldMas_avg,
-				//  allStats.H,
-				//  allStats.material_other
-				//]);
 				updateChart(mcChart, [
 				  allStats.HarvestM_avg,
 				  allStats.HarvestM_min,
