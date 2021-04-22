@@ -373,7 +373,7 @@ function loadSceneView(){
 			//			"#FFB55A"
 			//		  ],
 			//		  borderWidth: 0,
-			//		  data: [0, 0, 0, 0, 0]
+			//		  data: [0, 0, 0]
 			//		}
 			//	  ]
 			//	},
