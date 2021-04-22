@@ -325,7 +325,7 @@ function loadSceneView(){
 					  label: label,
 					  backgroundColor: "#149dcf",
 					  stack: "Stack 0",
-					  data: [0, 0, 0, 0, 0, 0]
+					  data: [0, 0, 0]
 					}
 				  ]
 				},
