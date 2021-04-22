@@ -222,6 +222,7 @@ function loadSceneView(){
 			}
 
 			var mcChart = null;
+			var dyChart = null;
 			var materialChart = null;
 
 			function queryStatistics() {
@@ -230,6 +231,16 @@ function loadSceneView(){
 				  onStatisticField: "DryYield",
 				  outStatisticFieldName: "DryYield_avg",
 				  statisticType: "avg"
+				},
+				{
+				  onStatisticField: "DryYield",
+				  outStatisticFieldName: "DryYield_max",
+				  statisticType: "max"
+				},
+				{
+				  onStatisticField: "DryYield",
+				  outStatisticFieldName: "DryYield_min",
+				  statisticType: "min"
 				},
 				{
 				  onStatisticField: "YieldWet",
@@ -281,8 +292,13 @@ function loadSceneView(){
 				const allStats = result.features[0].attributes;
 				updateChart(mcChart, [
 				  allStats.HarvestM_avg,
-				  allStats.HarvestM_min,
-				  allStats.HarvestM_max
+				  allStats.HarvestM_max,
+				  allStats.HarvestM_min
+				]);
+				updateChart(dyChart, [
+				  allStats.DryYield_avg,
+				  allStats.DryYield_max,
+				  allStats.DryYield_min
 				]);
 			  }, console.error);
 			}
@@ -293,20 +309,20 @@ function loadSceneView(){
 			  chart.update();
 			}
 
-			function createMCChart() {
+			function createChart(id, label, title, chart) {
 
-			  const mcCanvas = document.getElementById("HarvMC-chart");
-			  mcChart = new Chart(mcCanvas.getContext("2d"), {
+			  const canvas = document.getElementById(id);
+			  chart = new Chart(canvas.getContext("2d"), {
 				type: "horizontalBar",
 				data: {
 				  labels: [
 					"Average",
-					"Minimum",
-					"Maximum"
+					"Maximum",
+					"Minimum"
 				  ],
 				  datasets: [
 					{
-					  label: "MC %",
+					  label: label,
 					  backgroundColor: "#149dcf",
 					  stack: "Stack 0",
 					  data: [0, 0, 0, 0, 0, 0]
@@ -320,7 +336,7 @@ function loadSceneView(){
 				  },
 				  title: {
 					display: true,
-					text: "Harvest Moisture Content"
+					text: title
 				  },
 				  scales: {
 					xAxes: [
@@ -375,13 +391,13 @@ function loadSceneView(){
 			//  });
 			//}
 
-			function clearCharts() {
-			//  updateChart(materialChart, [0, 0, 0, 0, 0]);
-			  updateChart(mcChart, [0, 0, 0, 0, 0, 0]);
+			function clearCharts(chart) {
+			//  updateChart(materialChart, [0, 0, 0]);
+			  updateChart(chart, [0, 0, 0]);
 			  document.getElementById("count").innerHTML = 0;
 			}
 
-			createMCChart();
+			createChart("HarvMC-chart","MC %","Harvest Moisture Content",mcChart);
 			//createMaterialChart();
 		});
 	});
