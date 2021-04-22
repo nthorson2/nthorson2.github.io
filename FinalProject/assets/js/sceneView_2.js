@@ -13,19 +13,19 @@ function loadSceneView(){
 		"esri/core/promiseUtils"
 	],function(WebScene,SceneView,GraphicsLayer,SketchViewModel,Slider,geometryEngine,Graphic,promiseUtils){
 		
-		//var info = new OAuthInfo({
-		//  // Swap this ID out with registered application ID
-		//  appId: "9i1kCOvfh9sC96ys",
-		//  popup: false
-		//});
+		var info = new OAuthInfo({
+		  // Swap this ID out with registered application ID
+		  appId: "9i1kCOvfh9sC96ys",
+		  popup: false
+		});
 
-		//esriId.registerOAuthInfos([info]);
+		esriId.registerOAuthInfos([info]);
 		
-		//var portal = new Portal();
-		//// Setting authMode to immediate signs the user in once loaded
-		//portal.authMode = "immediate";
-		//// Once loaded, user is signed in
-		//portal.load().then(function(){
+		var portal = new Portal();
+		// Setting authMode to immediate signs the user in once loaded
+		portal.authMode = "immediate";
+		// Once loaded, user is signed in
+		portal.load().then(function(){
 			// Load webscene and display it in a SceneView
 			const webscene = new WebScene({
 			  portalItem: {
@@ -398,6 +398,6 @@ function loadSceneView(){
 			mcChart = createChart("HarvMC-chart","MC %","Harvest Moisture Content",mcChart);
 			dyChart = createChart("HarvDY-chart","(bu/ac)","Dry Yield (bu/ac)", dyChart); 
 			//createMaterialChart();
-		//});
+		});
 	});
 };
