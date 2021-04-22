@@ -391,9 +391,10 @@ function loadSceneView(){
 			//  });
 			//}
 
-			function clearCharts(chart) {
+			function clearCharts() {
 			//  updateChart(materialChart, [0, 0, 0]);
-			  updateChart(chart, [0, 0, 0]);
+			  updateChart(mcChart, [0, 0, 0]);
+			  updateChart(dyChart, [0, 0, 0]);
 			  document.getElementById("count").innerHTML = 0;
 			}
 
