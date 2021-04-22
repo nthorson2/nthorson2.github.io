@@ -141,7 +141,8 @@ function loadSceneView(){
 			  sketchLayer.removeAll();
 			  bufferLayer.removeAll();
 			  clearHighlighting();
-			  clearCharts();
+			  clearChart(mcChart);
+			  clearChart(dyChart);
 			  resultDiv.style.display = "none";
 			}
 
@@ -391,10 +392,9 @@ function loadSceneView(){
 			//  });
 			//}
 
-			function clearCharts() {
+			function clearChart(chart) {
 			//  updateChart(materialChart, [0, 0, 0]);
-			  updateChart(mcChart, [0, 0, 0]);
-			  updateChart(dyChart, [0, 0, 0]);
+			  updateChart(chart, [0, 0, 0]);
 			  document.getElementById("count").innerHTML = 0;
 			}
 
