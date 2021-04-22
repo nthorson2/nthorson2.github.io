@@ -398,6 +398,7 @@ function loadSceneView(){
 			}
 
 			createChart("HarvMC-chart","MC %","Harvest Moisture Content",mcChart);
+			createChart("HarvDY-chart","(bu/ac)","Dry Yield (bu/ac)", dyChart); 
 			//createMaterialChart();
 		});
 	});
