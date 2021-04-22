@@ -287,14 +287,14 @@ function loadSceneView(){
 			  return sceneLayerView.queryFeatures(query).then(function(result) {
 				const allStats = result.features[0].attributes;
 				updateChart(mcChart, [
-				  allStats.HarvestM_avg,
-				  allStats.HarvestM_max,
-				  allStats.HarvestM_min
+				  allStats.HarvestM_avg.round(1),
+				  allStats.HarvestM_max.round(1),
+				  allStats.HarvestM_min.round(1)
 				]);
 				updateChart(dyChart, [
-				  allStats.DryYield_avg,
-				  allStats.DryYield_max,
-				  allStats.DryYield_min
+				  allStats.DryYield_avg.round(2),
+				  allStats.DryYield_max.round(2),
+				  allStats.DryYield_min.round(2)
 				]);
 			  }, console.error);
 			}
