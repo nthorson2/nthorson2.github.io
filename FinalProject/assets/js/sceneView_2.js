@@ -13,7 +13,7 @@ function loadSceneView(){
 		"esri/core/promiseUtils"
 	],function(Portal,OAuthInfo,esriId,WebScene,SceneView,GraphicsLayer,SketchViewModel,Slider,geometryEngine,Graphic,promiseUtils){
 		
-		//oathu2 authorization call
+		//oauth2 authorization call
 		var info = new OAuthInfo({
 		  // Swap this ID out with registered application ID
 		  appId: "9i1kCOvfh9sC96ys",
