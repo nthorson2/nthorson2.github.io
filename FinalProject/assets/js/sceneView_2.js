@@ -16,10 +16,6 @@ function loadSceneView(){
 		var info = new OAuthInfo({
 		  // Swap this ID out with registered application ID
 		  appId: "9i1kCOvfh9sC96ys",
-		  // Uncomment the next line and update if using your own portal
-		  // portalUrl: "https://<host>:<port>/arcgis"
-		  // Uncomment the next line to prevent the user's signed in state from being shared with other apps on the same domain with the same authNamespace value.
-		  // authNamespace: "portal_oauth_inline",
 		  popup: false
 		});
 
@@ -93,7 +89,7 @@ function loadSceneView(){
 				runQuery();
 			  }
 			});
-			// draw geometry buttons - use the selected geometry to sktech
+			// draw geometry buttons - use the selected geometry to sketch
 			document
 			  .getElementById("point-geometry-button")
 			  .addEventListener("click", geometryButtonsClickHandler);
