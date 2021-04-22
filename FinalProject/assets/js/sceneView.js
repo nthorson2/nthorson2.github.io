@@ -119,7 +119,7 @@ function loadSceneView(){
 			  },
 			  precision: 0,
 			  labelFormatFunction: function(value, type) {
-				return value.toString() + "ft";
+				return value.toString() + "m";
 			  },
 			  values: [0]
 			});
@@ -195,7 +195,7 @@ function loadSceneView(){
 				var bufferGeometry = geometryEngine.geodesicBuffer(
 				  sketchGeometry,
 				  buffer,
-				  "feet"
+				  "meters"
 				);
 				if (bufferLayer.graphics.length === 0) {
 				  bufferLayer.add(
