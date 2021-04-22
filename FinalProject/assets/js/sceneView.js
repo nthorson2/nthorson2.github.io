@@ -244,7 +244,7 @@ function loadSceneView(){
 				{
 				  onStatisticField: "HarvestM",
 				  outStatisticFieldName: "HarvestM_avg",
-				  statisticType: "HarvestM_avg"
+				  statisticType: "avg"
 				},
 				{
 				  onStatisticField:	"HarvestM",
