@@ -352,6 +352,7 @@ function loadSceneView(){
 				  }
 				}
 			  });
+			  return chart
 			}
 			//function createMaterialChart() {
 			//  const yieldCanvas = document.getElementById("material-chart");
@@ -394,8 +395,8 @@ function loadSceneView(){
 			  document.getElementById("count").innerHTML = 0;
 			}
 
-			createChart("HarvMC-chart","MC %","Harvest Moisture Content",mcChart);
-			createChart("HarvDY-chart","(bu/ac)","Dry Yield (bu/ac)", dyChart); 
+			mcChart = createChart("HarvMC-chart","MC %","Harvest Moisture Content",mcChart);
+			dyChart = createChart("HarvDY-chart","(bu/ac)","Dry Yield (bu/ac)", dyChart); 
 			//createMaterialChart();
 		});
 	});
