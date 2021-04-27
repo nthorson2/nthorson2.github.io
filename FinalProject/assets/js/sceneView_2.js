@@ -67,8 +67,8 @@ function loadSceneView(){
 			  	view: view,
 			    	layerInfos: [
 			      	{
-					layer: sceneLayer,
-					title: "Dry Yield (bu/ac)"
+				   layer: sceneLayer,
+				   title: "Dry Yield (bu/ac)"
 			      	}
 			    	]
 			  });
