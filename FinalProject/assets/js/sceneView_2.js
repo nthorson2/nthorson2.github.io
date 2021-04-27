@@ -64,11 +64,12 @@ function loadSceneView(){
 			});
 			
 			// add webscene feature layer legend to sceneview
+			var wsLayer = webscene.layers.getItemAt(0);
 			var legend = new Legend({
 			    view: view,
 			    layerInfos: [
 			      {
-				layer: sceneLayer,
+				layer: wsLayer,
 				title: "Dry Yield (bu/ac)"
 			      }
 			    ]
