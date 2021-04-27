@@ -8,7 +8,7 @@ function loadSceneView(){
 		"esri/layers/GraphicsLayer",
 		"esri/widgets/Sketch/SketchViewModel",
 		"esri/widgets/Slider",
-		"esri/widgets/Legend,
+		"esri/widgets/Legend",
 		"esri/geometry/geometryEngine",
 		"esri/Graphic",
 		"esri/core/promiseUtils"
