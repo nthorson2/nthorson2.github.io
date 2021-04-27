@@ -63,7 +63,7 @@ function loadSceneView(){
 			  });
 			});
 			
-			// add legend
+			// add webscene feature layer legend to sceneview
 			var featureLayer = webmap.layers.getItemAt(0);
 			var legend = new Legend({
 			    view: view,
