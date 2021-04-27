@@ -61,23 +61,22 @@ function loadSceneView(){
 				sceneLayerView = layerView;
 				queryDiv.style.display = "block";
 			  });
-			});
 			
-			// add webscene feature layer legend to sceneview
-			var wsLayer = webscene.layers.getItemAt(0);
-			var legend = new Legend({
-			    view: view,
-			    layerInfos: [
-			      {
-				layer: wsLayer,
-				title: "Dry Yield (bu/ac)"
-			      }
-			    ]
+			  // add webscene feature layer legend to sceneview
+	 		  var legend = new Legend({
+			  	view: view,
+			    	layerInfos: [
+			      	{
+					layer: sceneLayer,
+					title: "Dry Yield (bu/ac)"
+			      	}
+			    	]
+			  });
+			  view.ui.add(legend,"bottom-right");
 			});
 			
 			view.ui.add([queryDiv], "bottom-left");
 			view.ui.add([resultDiv], "top-right");
-			view.ui.add(legend,"bottom-right");
 			
 			// use SketchViewModel to draw polygons that are used as a query
 			let sketchGeometry = null;
