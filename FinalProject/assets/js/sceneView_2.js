@@ -8,10 +8,11 @@ function loadSceneView(){
 		"esri/layers/GraphicsLayer",
 		"esri/widgets/Sketch/SketchViewModel",
 		"esri/widgets/Slider",
+		"esri/widgets/Legend,
 		"esri/geometry/geometryEngine",
 		"esri/Graphic",
 		"esri/core/promiseUtils"
-	],function(Portal,OAuthInfo,esriId,WebScene,SceneView,GraphicsLayer,SketchViewModel,Slider,geometryEngine,Graphic,promiseUtils){
+	],function(Portal,OAuthInfo,esriId,WebScene,SceneView,GraphicsLayer,SketchViewModel,Slider,Legend,geometryEngine,Graphic,promiseUtils){
 		
 		//oauth2 authorization call procedure
 		var info = new OAuthInfo({
@@ -61,10 +62,23 @@ function loadSceneView(){
 				queryDiv.style.display = "block";
 			  });
 			});
-
+			
+			// add legend
+			var featureLayer = webmap.layers.getItemAt(0);
+			var legend = new Legend({
+			    view: view,
+			    layerInfos: [
+			      {
+				layer: sceneLayer,
+				title: "Dry Yield (bu/ac)"
+			      }
+			    ]
+			});
+			
 			view.ui.add([queryDiv], "bottom-left");
 			view.ui.add([resultDiv], "top-right");
-
+			view.ui.add(legend,"bottom-right");
+			
 			// use SketchViewModel to draw polygons that are used as a query
 			let sketchGeometry = null;
 			const sketchViewModel = new SketchViewModel({
