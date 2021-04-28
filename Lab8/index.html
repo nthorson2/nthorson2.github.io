@@ -34,119 +34,127 @@
 					position: {
 					  latitude: 41.6608232,
 					  longitude: -91.537668,
-					  z: 290
+					  z: 400
 					},
-					tilt: 60,
-					heading: 330
+					tilt: 75,
+					heading: 355
 				  },
 				  environment: {
 					lighting: {
-					  date: new Date("April 15, 2020 16:00:00 EDT"),
+					  date: new Date("April 15, 2020 8:30:00 EDT"),
 					  directShadowsEnabled: true,
 					  ambientOcclusionEnabled: true
 					}
 				  }
-			});
+				});
 			
-			var uniqueValueInfos = [
-			{
-				value: "Crataegus sp.",
-				symbol: {
-				  type: "web-style", // autocasts as new WebStyleSymbol()
-				  name: "Crataegus",
-				  styleName: "EsriRealisticTreesStyle"
-				}
-			},
-			{
-				value: "Fraxinus pennsylvanica",
-				symbol: {
-				  type: "web-style", // autocasts as new WebStyleSymbol()
-				  name: "Fraxinus",
-				  styleName: "EsriRealisticTreesStyle"
-				}
-			},
-			{
-				value: "Picea abies",
-				symbol: {
-				  type: "web-style", // autocasts as new WebStyleSymbol()
-				  name: "Picea",
-				  styleName: "EsriRealisticTreesStyle"
-				}
-			},
-			{
-				value: "Gleditsia triacanthos",
-				symbol: {
-				  type: "web-style", // autocasts as new WebStyleSymbol()
-				  name: "Robinia",
-				  styleName: "EsriRealisticTreesStyle"
-				}
-			},
-			{
-				value: "Fagus grandifolia",
-				symbol: {
-				  type: "web-style", // autocasts as new WebStyleSymbol()
-				  name: "Fagus",
-				  styleName: "EsriRealisticTreesStyle"
-				}
-			},
-			{
-				value: "Quercus macrocarpa",
-				symbol: {
-				  type: "web-style", // autocasts as new WebStyleSymbol()
-				  name: "Quercus",
-				  styleName: "EsriRealisticTreesStyle"
-				}
-			},
-			{
-				value: "Pinus strobus",
-				symbol: {
-				  type: "web-style", // autocasts as new WebStyleSymbol()
-				  name: "Pinus",
-				  styleName: "EsriRealisticTreesStyle"
-				}
-			},
-			{
-				value: "Liriodendron tulipifera",
-				symbol: {
-				  type: "web-style", // autocasts as new WebStyleSymbol()
-				  name: "Philodendron",
-				  styleName: "EsriRealisticTreesStyle"
-				}
-			}
-			];
-			
-			//define and add vegetation layer
-			var vegetationLayer = new FeatureLayer({
-				url: "https://maps.facilities.uiowa.edu/arcgis/rest/services/Features/Trees/MapServer/1",
-					elevationInfo: {
-					mode: "on-the-ground"
-				},
-				renderer: {
-					type: "unique-value", // autocasts as new UniqueValueRenderer()
-					field: "Scientific",
-					defaultSymbol: {
+				var uniqueValueInfos = [
+				{
+					value: "Crataegus sp.",
+					symbol: {
 					  type: "web-style", // autocasts as new WebStyleSymbol()
-					  name: "Unknown",
+					  name: "Casuarina",
 					  styleName: "EsriRealisticTreesStyle"
-					},
-					uniqueValueInfos: uniqueValueInfos,
-					visualVariables: [
-					  {
-						type: "size",
-						field: "Height",
-						axis: "height" // take the real height of the plant from the SIZE field
-					  },
-					  {
-						type: "rotation",
-						valueExpression: "random() * 360" // we use a random rotation, so that plants look different
-					  }
-					]
+					}
+				},
+				{
+					value: "Fraxinus pennsylvanica",
+					symbol: {
+					  type: "web-style", // autocasts as new WebStyleSymbol()
+					  name: "Castanea",
+					  styleName: "EsriRealisticTreesStyle"
+					}
+				},
+				{
+					value: "Picea abies",
+					symbol: {
+					  type: "web-style", // autocasts as new WebStyleSymbol()
+					  name: "Platanus",
+					  styleName: "EsriRealisticTreesStyle"
+					}
+				},
+				{
+					value: "Gleditsia triacanthos",
+					symbol: {
+					  type: "web-style", // autocasts as new WebStyleSymbol()
+					  name: "Tilia",
+					  styleName: "EsriRealisticTreesStyle"
+					}
+				},
+				{
+					value: "Fagus grandifolia",
+					symbol: {
+					  type: "web-style", // autocasts as new WebStyleSymbol()
+					  name: "Laurus",
+					  styleName: "EsriRealisticTreesStyle"
+					}
+				},
+				{
+					value: "Quercus macrocarpa",
+					symbol: {
+					  type: "web-style", // autocasts as new WebStyleSymbol()
+					  name: "Sorbus",
+					  styleName: "EsriRealisticTreesStyle"
+					}
+				},
+				{
+					value: "Pinus strobus",
+					symbol: {
+					  type: "web-style", // autocasts as new WebStyleSymbol()
+					  name: "Quercus",
+					  styleName: "EsriRealisticTreesStyle"
+					}
+				},
+				{
+					value: "Liriodendron tulipifera",
+					symbol: {
+					  type: "web-style", // autocasts as new WebStyleSymbol()
+					  name: "Juglans",
+					  styleName: "EsriRealisticTreesStyle"
+					}
 				}
-			});
-			
-			map.add(
-			  vegetationLayer
-			);
+				];
+				
+				//define and add vegetation layer
+				var vegetationLayer = new FeatureLayer({
+					url: "https://maps.facilities.uiowa.edu/arcgis/rest/services/Features/Trees/MapServer/1",
+					elevationInfo: {
+						mode: "on-the-ground"
+					},
+					renderer: {
+						type: "unique-value", // autocasts as new UniqueValueRenderer()
+						field: "Scientific",
+						defaultSymbol: {
+						  type: "web-style", // autocasts as new WebStyleSymbol()
+						  name: "Prunus",
+						  styleName: "EsriRealisticTreesStyle"
+						},
+						uniqueValueInfos: uniqueValueInfos,
+						visualVariables: [
+						  {
+							type: "size",
+							field: "Height",
+							axis: "height" // take the real height of the plant from the SIZE field
+						  },
+						  {
+							type: "rotation",
+							valueExpression: "random() * 360" // we use a random rotation, so that plants look different
+						  }
+						]
+					}
+				});
+				
+				var bikesLayer = new FeatureLayer({
+					url: "https://maps.facilities.uiowa.edu/arcgis/rest/services/Features/Bikes/MapServer/5",
+					elevationInfo: {
+							mode: "on-the-ground"
+					}
+				});
+				
+				map.addMany([
+				  vegetationLayer,
+				  bikesLayer
+				]);
 			});
 		</script>
 	</head>
