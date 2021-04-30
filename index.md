@@ -39,7 +39,8 @@
 			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab7">Lab 7</a></li>
 				<ul>
 					<li><a href="https://nthorson2.github.io/Lab7/part1/index.html">Assignment 7 Part 1</a></li>
-					<li><a href="https://nthorson2.github.io/Lab7/part2/index.html">Assignment 7 Part 2</a></li>
+					<li><a href="https://nthorson2.github.io/Lab7/part2-1/index.html">Assignment 7 Part 2-1</a></li>
+					<li><a href="https://nthorson2.github.io/Lab7/part2-2/index.html">Assignment 7 Part 2-2</a></li>
 				</ul>
 			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/Lab8">Lab 8</a></li>
 				<ul>
