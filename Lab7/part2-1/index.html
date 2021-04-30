@@ -40,11 +40,12 @@
           }).addTo(map);
         
           $.getJSON("https://nthorson2.github.io/Lab7/part2-1/city.geojson")
-                var info = processData(data);
+                .done(function(data){
+                    var info = processData(data);
                 
-                createPropSymbols(info.timestamps, data);
-                createSliderUI(info.timestamps);
-          });
+                    createPropSymbols(info.timestamps, data);
+                    createSliderUI(info.timestamps);
+                });
         
           function processData(data) {
               // First, initialize the variables to hold the timestamps and min/max population values
@@ -125,7 +126,7 @@
                   });
                   // Define the labels of the time slider as an array of strings
                   // Modify this for your data
-                  var labels = ["1950", "1960", "1970", "1980", "1990", "2000", "2010","2019"];
+                  var labels = ["1950", "1960", "1970", "1980", "1990", "2000", "2010","2020"];
                   <!-- $(slider).mousedown(function () { -->
                       <!-- map.dragging.disable(); -->
                   <!-- }); -->
