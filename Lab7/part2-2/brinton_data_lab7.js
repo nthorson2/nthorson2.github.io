@@ -1,7 +1,5 @@
 var brintonData = {
-"type": "FeatureCollection",
-"name": "brinton_data_lab7",
-"features": [
+[
 { "type": "Feature", "properties": { "name": "[Aldreth] Opera House", "latitude": "43.066361", "longitude": "-92.672411", "time": "11\/30\/1907" }, "geometry": null },
 { "type": "Feature", "properties": { "name": "[Armory Evans O.H.]", "latitude": "41.009519", "longitude": "-95.228247", "time": "11\/23\/1905" }, "geometry": null },
 { "type": "Feature", "properties": { "name": "[Med.] Opera House", "latitude": "44.023327", "longitude": "-92.463021", "time": "5\/25\/1906" }, "geometry": null },
