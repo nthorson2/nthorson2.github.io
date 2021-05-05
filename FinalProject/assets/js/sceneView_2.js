@@ -188,7 +188,7 @@ function loadSceneView(){
 			  }
 			}
 
-			function highlightBuildings(objectIds) {
+			function highlightFeatures(objectIds) {
 			  // Remove any previous highlighting
 			  clearHighlighting();
 			  const objectIdField = sceneLayer.objectIdField;
@@ -228,7 +228,7 @@ function loadSceneView(){
 			  query.distance = bufferSize;
 			  return sceneLayerView
 				.queryObjectIds(query)
-				.then(highlightBuildings);
+				.then(highlightFeatures);
 			}
 
 			var mcChart = null;
@@ -368,39 +368,6 @@ function loadSceneView(){
 			  });
 			  return chart
 			}
-			//function createMaterialChart() {
-			//  const yieldCanvas = document.getElementById("material-chart");
-			//  yieldChart = new Chart(materialCanvas.getContext("2d"), {
-			//	type: "doughnut",
-			//	data: {
-			//	  labels: ["Concrete", "Brick", "Wood", "Steel", "Other"],
-			//	  datasets: [
-			//		{
-			//		  backgroundColor: [
-			//			"#FD7F6F",
-			//			"#7EB0D5",
-			//			"#B2E061",
-			//			"#BD7EBE",
-			//			"#FFB55A"
-			//		  ],
-			//		  borderWidth: 0,
-			//		  data: [0, 0, 0]
-			//		}
-			//	  ]
-			//	},
-			//	options: {
-			//	  responsive: false,
-			//	  cutoutPercentage: 35,
-			//	  legend: {
-			//		position: "bottom"
-			//	  },
-			//	  title: {
-			//		display: true,
-			//		text: "Building Material"
-			//	  }
-			//	}
-			//  });
-			//}
 
 			function clearCharts() {
 			//  updateChart(materialChart, [0, 0, 0]);
