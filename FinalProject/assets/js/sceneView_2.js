@@ -301,14 +301,14 @@ function loadSceneView(){
 			  return sceneLayerView.queryFeatures(query).then(function(result) {
 				const allStats = result.features[0].attributes;
 				updateChart(mcChart, [
-				  Math.round(allStats.HarvestM_avg * 100) / 100,
-				  allStats.HarvestM_max,
-				  allStats.HarvestM_min
+				  Math.round(allStats.HarvestM_avg * 10) / 10,
+				  Math.round(allStats.HarvestM_max * 10) / 10,
+				  Math.round(allStats.HarvestM_min * 10) / 10
 				]);
 				updateChart(dyChart, [
-				  allStats.DryYield_avg,
-				  allStats.DryYield_max,
-				  allStats.DryYield_min
+				  Math.round(allStats.DryYield_avg * 10) / 10,
+				  Math.round(allStats.DryYield_max * 10) / 10,
+				  Math.round(allStats.DryYield_min * 10) / 10
 				]);
 			  }, console.error);
 			}
