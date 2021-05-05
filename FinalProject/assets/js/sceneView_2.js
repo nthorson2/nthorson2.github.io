@@ -301,7 +301,7 @@ function loadSceneView(){
 			  return sceneLayerView.queryFeatures(query).then(function(result) {
 				const allStats = result.features[0].attributes;
 				updateChart(mcChart, [
-				  allStats.HarvestM_avg,
+				  Math.round(allStats.HarvestM_avg * 100) / 100,
 				  allStats.HarvestM_max,
 				  allStats.HarvestM_min
 				]);
