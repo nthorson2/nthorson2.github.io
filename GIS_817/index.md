@@ -2,7 +2,7 @@
 	<head>
 	</head>
 	<body>
-		<h1 style="padding-bottom: 10px;">Welcome to my Github Page</h1>
+		<h1 style="padding-bottom: 10px;">Geography 817</h1>
 		<p>This page will be solely dedicated to the <i>Geography 817 course - Web GIS</i></p>
 		<p>It will serve as both a repository for assignments, and a web server to host my interactive GIS Web Maps</p>
 		<h2 style="padding-top: 20px;">Contact Information</h2>
