@@ -1,8 +1,6 @@
 <html>
 	<head>
 	<style>
-		html,
-		body,
 		#header {
 		    background-color: #171717;
 		    color: #FDFDFB;
