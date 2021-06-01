@@ -10,7 +10,7 @@
 		section {
 		    margin-right: -80px;
 		}
-		h4 {
+		h4{
 		    font-weight: normal;
 		}
 		footer {
