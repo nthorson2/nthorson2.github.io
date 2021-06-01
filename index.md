@@ -4,7 +4,6 @@
 		#header {
 		    background-color: #171717;
 		    color: #FDFDFB;
-		    /* width: 170px; */
 		    float: left;
 		    position: fixed;
 		    border: 1px solid #000;
