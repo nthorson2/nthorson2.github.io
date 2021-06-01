@@ -10,13 +10,13 @@
 		<h3 style="padding-top: 50px;"><b>Main Repository:</b></h3>
 		<a href="https://github.com/nthorson2/nthorson2.github.io.git">https://github.com/nthorson2/nthorson2.github.io.git</a>
 		<h3 style="padding-top: 50px;"><b>Projects:</b></h3>
-		<h5 style="margin-left: 5px;">Page</h5>
-		<ul>
+		<h4 style="margin-left: 10px;">Page</h4>
+		<ul style="margin-left: 10px;">
 			<li><a href="https://nthorson2.github.io/GEOG_817/">GEOG - 817</a></li>
 			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/SpraySafely/">SpraySafely</a></li>
 		</ul>
-		<h5 style="padding-top: 10px; margin-left: 5px;">Repository</h5>
-		<ul>
+		<h4 style="padding-top: 10px; margin-left: 10px;">Repository</h4>
+		<ul style="margin-left: 10px;">
 			<li><a href="https://github.com/nthorson2/GEOG_817">GEOG - 817</a></li>
 			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/SpraySafely">SpraySafely</a></li>
 		</ul>
