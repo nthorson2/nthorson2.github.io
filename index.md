@@ -12,7 +12,7 @@
 		<p style="padding-top: 50px;"><b>Projects:</b></p>
 		<p><b>Page</b></p>
 		<ul>
-			<li><a href="https://nthorson2.github.io/GIS_817/index.html">GIS - 817</a></li>
+			<li><a href="https://nthorson2.github.io/GIS_817/index.md">GIS - 817</a></li>
 			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/SpraySafely/index.html">SpraySafely</a></li>
 		</ul>
 		<p style="padding-top: 10px;"><b>Repository</b></p>
