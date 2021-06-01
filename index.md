@@ -1,10 +1,13 @@
 <html>
 	<head>
 	<style>
+		html,
+		body,
 		#header {
 		    background-color: #171717;
 		    color: #FDFDFB;
 		    float: left;
+		    width: auto;
 		    position: fixed;
 		    border: 1px solid #000;
 		    -webkit-border-top-right-radius: 4px;
