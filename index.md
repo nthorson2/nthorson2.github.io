@@ -10,6 +10,9 @@
 		section {
 		    margin-right: -80px;
 		}
+		footer {
+		    margin-left: 60px;
+		}
 	</style>
 	</head>
 	<body>
