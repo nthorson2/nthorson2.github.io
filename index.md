@@ -4,6 +4,9 @@
 		header {
 		    width: auto;
 		}
+		header li {
+		    margin-left: 60px;
+		}
 		section {
 		    margin-right: -80px;
 		}
