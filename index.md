@@ -12,12 +12,12 @@
 		<p style="padding-top: 50px;"><b>Projects:</b></p>
 		<p><b>Page</b></p>
 		<ul>
-			<li><a href="https://nthorson2.github.io/GIS_817/index.html">GIS - 817</a></li>
+			<li><a href="https://nthorson2.github.io/GEOG_817/index.md">GIS - 817</a></li>
 			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/SpraySafely/index.html">SpraySafely</a></li>
 		</ul>
 		<p style="padding-top: 10px;"><b>Repository</b></p>
 		<ul>
-			<li><a href="https://github.com/nthorson2/nthorson2.github.io/tree/main/GIS_817">GIS - 817</a></li>
+			<li><a href="https://github.com/nthorson2/GEOG_817">GEOG - 817</a></li>
 			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/nthorson2.github.io/tree/main/SpraySafely">SpraySafely</a></li>
 		</ul>
 	</body>
