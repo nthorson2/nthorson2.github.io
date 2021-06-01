@@ -1,22 +1,22 @@
 <html>
 	<head>
-	<style>
-		header {
-		    width: auto;
-		}
-		header li {
-		    margin-left: 60px;
-		}
-		section {
-		    margin-right: -80px;
-		}
-		h4 {
-		    font-weight: normal;
-		}
-		footer {
-		    margin-left: 60px;
-		}
-	</style>
+		<style>
+			header {
+			    width: auto;
+			}
+			header li {
+			    margin-left: 60px;
+			}
+			section {
+			    margin-right: -80px;
+			}
+			h4 {
+			    font-weight: normal;
+			}
+			footer {
+			    margin-left: 60px;
+			}
+		</style>
 	</head>
 	<body>
 		<h1 style="padding-bottom: 10px;">Welcome to my Github Page</h1>
