@@ -17,8 +17,8 @@
 		</ul>
 		<p style="padding-top: 10px;"><b>Repository</b></p>
 		<ul>
-			<li><a href="https://github.com/nthorson2/nthorson2.github.io.git/blob/main/GIS_817">GIS - 817</a></li>
-			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/nthorson2.github.io.git/blob/main/SpraySafely">SpraySafely</a></li>
+			<li><a href="https://github.com/nthorson2/nthorson2.github.io/tree/main/GIS_817">GIS - 817</a></li>
+			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/nthorson2.github.io/tree/main/SpraySafely">SpraySafely</a></li>
 		</ul>
 	</body>
 </html>
