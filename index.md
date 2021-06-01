@@ -1,9 +1,7 @@
 <html>
 	<head>
 	<style>
-		html,
-		body,
-		#header {
+		header {
 		    background-color: #171717;
 		    color: #FDFDFB;
 		    float: left;
@@ -20,7 +18,7 @@
 		    margin: 30px 25px 0 0;
 		    -webkit-font-smoothing: antialiased;
 		}
-		#section {
+		section {
 		    width: 650px;
 		    float: right;
 		    padding-bottom: 50px;
