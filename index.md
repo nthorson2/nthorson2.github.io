@@ -1,7 +1,8 @@
 <html>
 	<head>
-	</head>
 	<style>
+		html,
+		body,
 		#header {
 		    background-color: #171717;
 		    color: #FDFDFB;
@@ -26,6 +27,7 @@
 		    margin-right: -80px;
 		}
 	</style>
+	</head>
 	<body>
 		<h1 style="padding-bottom: 10px;">Welcome to my Github Page</h1>
 		<p>This page will serve as a directory to all work that has been completed or is still in the process of being completed. <i>See links below for Specific 				Projects</i></p>
