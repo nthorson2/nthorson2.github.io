@@ -11,7 +11,7 @@
 		    margin-right: -80px;
 		}
 		h4 {
-		    weight: normal;
+		    font-weight: normal;
 		}
 		footer {
 		    margin-left: 60px;
