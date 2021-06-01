@@ -12,8 +12,8 @@
 		<p style="padding-top: 50px;"><b>Projects:</b></p>
 		<p><b>Page</b></p>
 		<ul>
-			<li><a href="https://nthorson2.github.io/GEOG_817/index.html">GEOG - 817</a></li>
-			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/SpraySafely/index.html">SpraySafely</a></li>
+			<li><a href="https://nthorson2.github.io/GEOG_817/">GEOG - 817</a></li>
+			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/SpraySafely/">SpraySafely</a></li>
 		</ul>
 		<p style="padding-top: 10px;"><b>Repository</b></p>
 		<ul>
