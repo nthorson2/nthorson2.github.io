@@ -15,7 +15,7 @@
 			<li><a href="https://nthorson2.github.io/GEOG_817/">GEOG - 817</a></li>
 			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/SpraySafely/">SpraySafely</a></li>
 		</ul>
-		<h4 style="padding-top: 10px; margin-left: 10px;">Repository</h4>
+		<h4 style="padding-top: 0px; margin-left: 10px;">Repository</h4>
 		<ul style="margin-left: 10px;">
 			<li><a href="https://github.com/nthorson2/GEOG_817">GEOG - 817</a></li>
 			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/SpraySafely">SpraySafely</a></li>
