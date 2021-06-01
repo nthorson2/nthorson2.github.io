@@ -1,31 +1,31 @@
 <html>
 	<head>
-        	<style>
-			#header {
-			    background-color: #171717;
-			    color: #FDFDFB;
-			    /* width: 170px; */
-			    float: left;
-			    position: fixed;
-			    border: 1px solid #000;
-			    -webkit-border-top-right-radius: 4px;
-			    -webkit-border-bottom-right-radius: 4px;
-			    -moz-border-radius-topright: 4px;
-			    -moz-border-radius-bottomright: 4px;
-			    border-top-right-radius: 4px;
-			    border-bottom-right-radius: 4px;
-			    padding: 34px 25px 22px 50px;
-			    margin: 30px 25px 0 0;
-			    -webkit-font-smoothing: antialiased;
-	    		}
-			#section {
-			    width: 650px;
-			    float: right;
-			    padding-bottom: 50px;
-			    margin-right: -80px;
-			}
-		</style>
 	</head>
+	<style>
+		#header {
+		    background-color: #171717;
+		    color: #FDFDFB;
+		    /* width: 170px; */
+		    float: left;
+		    position: fixed;
+		    border: 1px solid #000;
+		    -webkit-border-top-right-radius: 4px;
+		    -webkit-border-bottom-right-radius: 4px;
+		    -moz-border-radius-topright: 4px;
+		    -moz-border-radius-bottomright: 4px;
+		    border-top-right-radius: 4px;
+		    border-bottom-right-radius: 4px;
+		    padding: 34px 25px 22px 50px;
+		    margin: 30px 25px 0 0;
+		    -webkit-font-smoothing: antialiased;
+		}
+		#section {
+		    width: 650px;
+		    float: right;
+		    padding-bottom: 50px;
+		    margin-right: -80px;
+		}
+	</style>
 	<body>
 		<h1 style="padding-bottom: 10px;">Welcome to my Github Page</h1>
 		<p>This page will serve as a directory to all work that has been completed or is still in the process of being completed. <i>See links below for Specific 				Projects</i></p>
