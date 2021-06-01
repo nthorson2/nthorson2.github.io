@@ -11,8 +11,8 @@
 		<a href="https://github.com/nthorson2/nthorson2.github.io.git">https://github.com/nthorson2/nthorson2.github.io.git</a>
 		<p style="padding-top: 50px;"><b>Projects:</b></p>
 		<ul>
-			<li><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/GIS_817">GIS - 817</a></li>
-			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/nthorson2.github.io/blob/main/SpraySafely">SpraySafely</a></li>
+			<li><a href="https://nthorson2.github.io/GIS_817/index.html">GIS - 817</a></li>
+			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/SpraySafely/index.html">SpraySafely</a></li>
 		</ul>
 	</body>
 </html>
