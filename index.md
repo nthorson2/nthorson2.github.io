@@ -9,13 +9,13 @@
 		<p>If you need to contact me, please reach out through email at <a href="mailto:nthorson2@unl.edu">nthorson2@unl.edu</a></p>
 		<p style="padding-top: 50px;"><b>Main Repository:</b></p>
 		<a href="https://github.com/nthorson2/nthorson2.github.io.git">https://github.com/nthorson2/nthorson2.github.io.git</a>
-		<p style="padding-top: 50px;"><b>Projects:</b></p>
-		<p><b>Page</b></p>
+		<h2 style="padding-top: 50px;"><b>Projects:</b></h2>
+		<h5><b>Page</b></h5>
 		<ul>
 			<li><a href="https://nthorson2.github.io/GEOG_817/">GEOG - 817</a></li>
 			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/SpraySafely/">SpraySafely</a></li>
 		</ul>
-		<p style="padding-top: 10px;"><b>Repository</b></p>
+		<h5 style="padding-top: 10px;"><b>Repository</b></h5>
 		<ul>
 			<li><a href="https://github.com/nthorson2/GEOG_817">GEOG - 817</a></li>
 			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/SpraySafely">SpraySafely</a></li>
