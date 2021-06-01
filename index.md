@@ -1,5 +1,30 @@
 <html>
 	<head>
+        	<style>
+			#header {
+			    background-color: #171717;
+			    color: #FDFDFB;
+			    /* width: 170px; */
+			    float: left;
+			    position: fixed;
+			    border: 1px solid #000;
+			    -webkit-border-top-right-radius: 4px;
+			    -webkit-border-bottom-right-radius: 4px;
+			    -moz-border-radius-topright: 4px;
+			    -moz-border-radius-bottomright: 4px;
+			    border-top-right-radius: 4px;
+			    border-bottom-right-radius: 4px;
+			    padding: 34px 25px 22px 50px;
+			    margin: 30px 25px 0 0;
+			    -webkit-font-smoothing: antialiased;
+	    		}
+			#section {
+			    width: 650px;
+			    float: right;
+			    padding-bottom: 50px;
+			    margin-right: -80px;
+			}
+		</style>
 	</head>
 	<body>
 		<h1 style="padding-bottom: 10px;">Welcome to my Github Page</h1>
