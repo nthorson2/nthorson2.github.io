@@ -30,12 +30,12 @@
 		<h4 style="margin-left: 10px;">Page</h4>
 		<ul style="margin-left: 10px;">
 			<li><a href="https://nthorson2.github.io/GEOG_817/">GEOG - 817</a></li>
-			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/Spray-Safely/">SpraySafely</a></li>
+			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/Spray-Safely/">Spray-Safely</a></li>
 		</ul>
 		<h4 style="padding-top: 0px; margin-left: 10px;">Repository</h4>
 		<ul style="margin-left: 10px;">
 			<li><a href="https://github.com/nthorson2/GEOG_817">GEOG - 817</a></li>
-			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/Spray-Safely">SpraySafely</a></li>
+			<li style="padding-top: 5px;"><a href="https://github.com/nthorson2/Spray-Safely">Spray-Safely</a></li>
 		</ul>
 	</body>
 </html>
