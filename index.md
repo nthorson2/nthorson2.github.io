@@ -31,6 +31,7 @@
 		<ul style="margin-left: 10px;">
 			<li><a href="https://nthorson2.github.io/GEOG_817/">GEOG - 817</a></li>
 			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/Spray-Safely/">Spray-Safely</a></li>
+			<li style="padding-top: 5px;"><a href="https://nthorson2.github.io/Development/">Development</a></li>
 		</ul>
 		<h4 style="padding-top: 0px; margin-left: 10px;">Repository</h4>
 		<ul style="margin-left: 10px;">
